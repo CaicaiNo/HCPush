@@ -1,7 +1,7 @@
 # HCPushSettingViewController
-[![language](https://img.shields.io/badge/language-Object--C-brightgreen)
-[![Version](https://img.shields.io/badge/Version-1.0-brightgreen)
-[![Platform](https://img.shields.io/badge/Platform-iOS-brightgreen)
+![language](https://img.shields.io/badge/language-Object--C-brightgreen)
+![Version](https://img.shields.io/badge/Version-1.0-brightgreen)
+![Platform](https://img.shields.io/badge/Platform-iOS-brightgreen)
 
 用于项目使用的方便的左侧或者右侧的弹出视图，自定义ViewController的逻辑独立
 
