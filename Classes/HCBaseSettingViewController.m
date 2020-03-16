@@ -7,8 +7,7 @@
 //
 
 #import "HCBaseSettingViewController.h"
-#include <sys/socket.h>
-#include <sys/sysctl.h>
+
 
 @interface HCBaseSettingViewController ()
 

@@ -42,7 +42,6 @@ typedef enum : NSUInteger {
 ///Tag backgoundView will cause ViewController dismiss
 @property (nonatomic, assign) BOOL backgoundTapDismissEnable;
 
-
 ///dismiss controller completed block
 @property (nonatomic, copy) void (^dismissComplete)(void);
 
