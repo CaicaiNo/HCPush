@@ -13,12 +13,7 @@
 		F3560F7D241F234400E0CE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3560F7C241F234400E0CE9A /* Assets.xcassets */; };
 		F3560F80241F234500E0CE9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3560F7E241F234500E0CE9A /* LaunchScreen.storyboard */; };
 		F3560F83241F234500E0CE9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560F82241F234500E0CE9A /* main.m */; };
-		F3560F8C241F236E00E0CE9A /* HCBaseSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560F8B241F236E00E0CE9A /* HCBaseSettingViewController.m */; };
-		F3560F8F241F267E00E0CE9A /* HCBaseSettingViewController+TransitionAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560F8E241F267E00E0CE9A /* HCBaseSettingViewController+TransitionAnimate.m */; };
-		F3560F92241F27E500E0CE9A /* HCBaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560F91241F27E500E0CE9A /* HCBaseAnimation.m */; };
-		F3560F95241F28A000E0CE9A /* HCPushHorizonalAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560F94241F28A000E0CE9A /* HCPushHorizonalAnimation.m */; };
 		F3560F9B241F303C00E0CE9A /* CALayer+BorderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560F9A241F303C00E0CE9A /* CALayer+BorderColor.m */; };
-		F3560FD4241F46DE00E0CE9A /* HCPushSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560FD3241F46DE00E0CE9A /* HCPushSettingViewController.m */; };
 		F3560FD8241F49D400E0CE9A /* HCTestCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560FD6241F49D400E0CE9A /* HCTestCollectionViewController.m */; };
 		F3560FD9241F49D400E0CE9A /* HCTestCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3560FD7241F49D400E0CE9A /* HCTestCollectionViewController.xib */; };
 		F3560FDD241F4BC700E0CE9A /* HCCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560FDB241F4BC700E0CE9A /* HCCollectionViewCell.m */; };
@@ -27,6 +22,11 @@
 		F3560FE4241F5AA000E0CE9A /* HCCollectionReusableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3560FE2241F5AA000E0CE9A /* HCCollectionReusableFooterView.xib */; };
 		F3561005241F722300E0CE9A /* HCTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3561003241F722300E0CE9A /* HCTestTableViewController.m */; };
 		F3561006241F722300E0CE9A /* HCTestTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3561004241F722300E0CE9A /* HCTestTableViewController.xib */; };
+		F3561024241F8C5100E0CE9A /* HCBaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F356101C241F8C5100E0CE9A /* HCBaseAnimation.m */; };
+		F3561025241F8C5100E0CE9A /* HCBaseSettingViewController+TransitionAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = F356101D241F8C5100E0CE9A /* HCBaseSettingViewController+TransitionAnimate.m */; };
+		F3561026241F8C5100E0CE9A /* HCBaseSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F356101F241F8C5100E0CE9A /* HCBaseSettingViewController.m */; };
+		F3561027241F8C5100E0CE9A /* HCPushHorizonalAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3561021241F8C5100E0CE9A /* HCPushHorizonalAnimation.m */; };
+		F3561028241F8C5100E0CE9A /* HCPushSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3561023241F8C5100E0CE9A /* HCPushSettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,17 +40,8 @@
 		F3560F7F241F234500E0CE9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3560F81241F234500E0CE9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3560F82241F234500E0CE9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F3560F8A241F236E00E0CE9A /* HCBaseSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBaseSettingViewController.h; sourceTree = "<group>"; };
-		F3560F8B241F236E00E0CE9A /* HCBaseSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBaseSettingViewController.m; sourceTree = "<group>"; };
-		F3560F8E241F267E00E0CE9A /* HCBaseSettingViewController+TransitionAnimate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HCBaseSettingViewController+TransitionAnimate.m"; sourceTree = "<group>"; };
-		F3560F90241F27E500E0CE9A /* HCBaseAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBaseAnimation.h; sourceTree = "<group>"; };
-		F3560F91241F27E500E0CE9A /* HCBaseAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBaseAnimation.m; sourceTree = "<group>"; };
-		F3560F93241F28A000E0CE9A /* HCPushHorizonalAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCPushHorizonalAnimation.h; sourceTree = "<group>"; };
-		F3560F94241F28A000E0CE9A /* HCPushHorizonalAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPushHorizonalAnimation.m; sourceTree = "<group>"; };
 		F3560F99241F303C00E0CE9A /* CALayer+BorderColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+BorderColor.h"; sourceTree = "<group>"; };
 		F3560F9A241F303C00E0CE9A /* CALayer+BorderColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+BorderColor.m"; sourceTree = "<group>"; };
-		F3560FD2241F46DE00E0CE9A /* HCPushSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCPushSettingViewController.h; sourceTree = "<group>"; };
-		F3560FD3241F46DE00E0CE9A /* HCPushSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPushSettingViewController.m; sourceTree = "<group>"; };
 		F3560FD5241F49D400E0CE9A /* HCTestCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCTestCollectionViewController.h; sourceTree = "<group>"; };
 		F3560FD6241F49D400E0CE9A /* HCTestCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCTestCollectionViewController.m; sourceTree = "<group>"; };
 		F3560FD7241F49D400E0CE9A /* HCTestCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCTestCollectionViewController.xib; sourceTree = "<group>"; };
@@ -63,6 +54,15 @@
 		F3561002241F722300E0CE9A /* HCTestTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCTestTableViewController.h; sourceTree = "<group>"; };
 		F3561003241F722300E0CE9A /* HCTestTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCTestTableViewController.m; sourceTree = "<group>"; };
 		F3561004241F722300E0CE9A /* HCTestTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCTestTableViewController.xib; sourceTree = "<group>"; };
+		F356101B241F8C5100E0CE9A /* HCBaseAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBaseAnimation.h; sourceTree = "<group>"; };
+		F356101C241F8C5100E0CE9A /* HCBaseAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBaseAnimation.m; sourceTree = "<group>"; };
+		F356101D241F8C5100E0CE9A /* HCBaseSettingViewController+TransitionAnimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HCBaseSettingViewController+TransitionAnimate.m"; sourceTree = "<group>"; };
+		F356101E241F8C5100E0CE9A /* HCBaseSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBaseSettingViewController.h; sourceTree = "<group>"; };
+		F356101F241F8C5100E0CE9A /* HCBaseSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBaseSettingViewController.m; sourceTree = "<group>"; };
+		F3561020241F8C5100E0CE9A /* HCPushHorizonalAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCPushHorizonalAnimation.h; sourceTree = "<group>"; };
+		F3561021241F8C5100E0CE9A /* HCPushHorizonalAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPushHorizonalAnimation.m; sourceTree = "<group>"; };
+		F3561022241F8C5100E0CE9A /* HCPushSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCPushSettingViewController.h; sourceTree = "<group>"; };
+		F3561023241F8C5100E0CE9A /* HCPushSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPushSettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 		F3560F72241F234400E0CE9A /* HCPushSettingViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F3560F89241F235D00E0CE9A /* Resource */,
+				F356101A241F8C5000E0CE9A /* Classes */,
 				F3560FDF241F54AA00E0CE9A /* Sample Code */,
 				F3560F73241F234400E0CE9A /* AppDelegate.h */,
 				F3560F74241F234400E0CE9A /* AppDelegate.m */,
@@ -108,22 +108,6 @@
 				F3560F82241F234500E0CE9A /* main.m */,
 			);
 			path = HCPushSettingViewController;
-			sourceTree = "<group>";
-		};
-		F3560F89241F235D00E0CE9A /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				F3560F8A241F236E00E0CE9A /* HCBaseSettingViewController.h */,
-				F3560F8B241F236E00E0CE9A /* HCBaseSettingViewController.m */,
-				F3560FD2241F46DE00E0CE9A /* HCPushSettingViewController.h */,
-				F3560FD3241F46DE00E0CE9A /* HCPushSettingViewController.m */,
-				F3560F8E241F267E00E0CE9A /* HCBaseSettingViewController+TransitionAnimate.m */,
-				F3560F90241F27E500E0CE9A /* HCBaseAnimation.h */,
-				F3560F91241F27E500E0CE9A /* HCBaseAnimation.m */,
-				F3560F93241F28A000E0CE9A /* HCPushHorizonalAnimation.h */,
-				F3560F94241F28A000E0CE9A /* HCPushHorizonalAnimation.m */,
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		F3560FDF241F54AA00E0CE9A /* Sample Code */ = {
@@ -169,6 +153,23 @@
 				F3561004241F722300E0CE9A /* HCTestTableViewController.xib */,
 			);
 			path = TestTableView;
+			sourceTree = "<group>";
+		};
+		F356101A241F8C5000E0CE9A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F356101B241F8C5100E0CE9A /* HCBaseAnimation.h */,
+				F356101C241F8C5100E0CE9A /* HCBaseAnimation.m */,
+				F356101D241F8C5100E0CE9A /* HCBaseSettingViewController+TransitionAnimate.m */,
+				F356101E241F8C5100E0CE9A /* HCBaseSettingViewController.h */,
+				F356101F241F8C5100E0CE9A /* HCBaseSettingViewController.m */,
+				F3561020241F8C5100E0CE9A /* HCPushHorizonalAnimation.h */,
+				F3561021241F8C5100E0CE9A /* HCPushHorizonalAnimation.m */,
+				F3561022241F8C5100E0CE9A /* HCPushSettingViewController.h */,
+				F3561023241F8C5100E0CE9A /* HCPushSettingViewController.m */,
+			);
+			name = Classes;
+			path = ../../Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,19 +246,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3560FD4241F46DE00E0CE9A /* HCPushSettingViewController.m in Sources */,
-				F3560F8F241F267E00E0CE9A /* HCBaseSettingViewController+TransitionAnimate.m in Sources */,
+				F3561025241F8C5100E0CE9A /* HCBaseSettingViewController+TransitionAnimate.m in Sources */,
+				F3561026241F8C5100E0CE9A /* HCBaseSettingViewController.m in Sources */,
 				F3560FE3241F5AA000E0CE9A /* HCCollectionReusableFooterView.m in Sources */,
 				F3560FD8241F49D400E0CE9A /* HCTestCollectionViewController.m in Sources */,
 				F3560F78241F234400E0CE9A /* ViewController.m in Sources */,
 				F3561005241F722300E0CE9A /* HCTestTableViewController.m in Sources */,
-				F3560F95241F28A000E0CE9A /* HCPushHorizonalAnimation.m in Sources */,
+				F3561027241F8C5100E0CE9A /* HCPushHorizonalAnimation.m in Sources */,
 				F3560F83241F234500E0CE9A /* main.m in Sources */,
 				F3560F75241F234400E0CE9A /* AppDelegate.m in Sources */,
-				F3560F92241F27E500E0CE9A /* HCBaseAnimation.m in Sources */,
 				F3560F9B241F303C00E0CE9A /* CALayer+BorderColor.m in Sources */,
-				F3560F8C241F236E00E0CE9A /* HCBaseSettingViewController.m in Sources */,
+				F3561024241F8C5100E0CE9A /* HCBaseAnimation.m in Sources */,
 				F3560FDD241F4BC700E0CE9A /* HCCollectionViewCell.m in Sources */,
+				F3561028241F8C5100E0CE9A /* HCPushSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,9 +401,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6GHP23DFJR;
 				INFOPLIST_FILE = HCPushSettingViewController/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -418,9 +419,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6GHP23DFJR;
 				INFOPLIST_FILE = HCPushSettingViewController/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
