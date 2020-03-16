@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F3560F75241F234400E0CE9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560F74241F234400E0CE9A /* AppDelegate.m */; };
+		F3560F78241F234400E0CE9A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560F77241F234400E0CE9A /* ViewController.m */; };
+		F3560F7B241F234400E0CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3560F79241F234400E0CE9A /* Main.storyboard */; };
+		F3560F7D241F234400E0CE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3560F7C241F234400E0CE9A /* Assets.xcassets */; };
+		F3560F80241F234500E0CE9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3560F7E241F234500E0CE9A /* LaunchScreen.storyboard */; };
+		F3560F83241F234500E0CE9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560F82241F234500E0CE9A /* main.m */; };
+		F3560F8C241F236E00E0CE9A /* HCBaseSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560F8B241F236E00E0CE9A /* HCBaseSettingViewController.m */; };
+		F3560F8F241F267E00E0CE9A /* HCBaseSettingViewController+TransitionAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560F8E241F267E00E0CE9A /* HCBaseSettingViewController+TransitionAnimate.m */; };
+		F3560F92241F27E500E0CE9A /* HCBaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560F91241F27E500E0CE9A /* HCBaseAnimation.m */; };
+		F3560F95241F28A000E0CE9A /* HCPushHorizonalAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560F94241F28A000E0CE9A /* HCPushHorizonalAnimation.m */; };
+		F3560F9B241F303C00E0CE9A /* CALayer+BorderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560F9A241F303C00E0CE9A /* CALayer+BorderColor.m */; };
+		F3560FD4241F46DE00E0CE9A /* HCPushSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560FD3241F46DE00E0CE9A /* HCPushSettingViewController.m */; };
+		F3560FD8241F49D400E0CE9A /* HCTestCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560FD6241F49D400E0CE9A /* HCTestCollectionViewController.m */; };
+		F3560FD9241F49D400E0CE9A /* HCTestCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3560FD7241F49D400E0CE9A /* HCTestCollectionViewController.xib */; };
+		F3560FDD241F4BC700E0CE9A /* HCCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560FDB241F4BC700E0CE9A /* HCCollectionViewCell.m */; };
+		F3560FDE241F4BC700E0CE9A /* HCCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3560FDC241F4BC700E0CE9A /* HCCollectionViewCell.xib */; };
+		F3560FE3241F5AA000E0CE9A /* HCCollectionReusableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560FE1241F5AA000E0CE9A /* HCCollectionReusableFooterView.m */; };
+		F3560FE4241F5AA000E0CE9A /* HCCollectionReusableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3560FE2241F5AA000E0CE9A /* HCCollectionReusableFooterView.xib */; };
+		F3561005241F722300E0CE9A /* HCTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3561003241F722300E0CE9A /* HCTestTableViewController.m */; };
+		F3561006241F722300E0CE9A /* HCTestTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3561004241F722300E0CE9A /* HCTestTableViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F3560F70241F234400E0CE9A /* HCPushSettingViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HCPushSettingViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3560F73241F234400E0CE9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F3560F74241F234400E0CE9A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F3560F76241F234400E0CE9A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F3560F77241F234400E0CE9A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F3560F7A241F234400E0CE9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F3560F7C241F234400E0CE9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3560F7F241F234500E0CE9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3560F81241F234500E0CE9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3560F82241F234500E0CE9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F3560F8A241F236E00E0CE9A /* HCBaseSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBaseSettingViewController.h; sourceTree = "<group>"; };
+		F3560F8B241F236E00E0CE9A /* HCBaseSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBaseSettingViewController.m; sourceTree = "<group>"; };
+		F3560F8E241F267E00E0CE9A /* HCBaseSettingViewController+TransitionAnimate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HCBaseSettingViewController+TransitionAnimate.m"; sourceTree = "<group>"; };
+		F3560F90241F27E500E0CE9A /* HCBaseAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBaseAnimation.h; sourceTree = "<group>"; };
+		F3560F91241F27E500E0CE9A /* HCBaseAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBaseAnimation.m; sourceTree = "<group>"; };
+		F3560F93241F28A000E0CE9A /* HCPushHorizonalAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCPushHorizonalAnimation.h; sourceTree = "<group>"; };
+		F3560F94241F28A000E0CE9A /* HCPushHorizonalAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPushHorizonalAnimation.m; sourceTree = "<group>"; };
+		F3560F99241F303C00E0CE9A /* CALayer+BorderColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+BorderColor.h"; sourceTree = "<group>"; };
+		F3560F9A241F303C00E0CE9A /* CALayer+BorderColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+BorderColor.m"; sourceTree = "<group>"; };
+		F3560FD2241F46DE00E0CE9A /* HCPushSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCPushSettingViewController.h; sourceTree = "<group>"; };
+		F3560FD3241F46DE00E0CE9A /* HCPushSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPushSettingViewController.m; sourceTree = "<group>"; };
+		F3560FD5241F49D400E0CE9A /* HCTestCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCTestCollectionViewController.h; sourceTree = "<group>"; };
+		F3560FD6241F49D400E0CE9A /* HCTestCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCTestCollectionViewController.m; sourceTree = "<group>"; };
+		F3560FD7241F49D400E0CE9A /* HCTestCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCTestCollectionViewController.xib; sourceTree = "<group>"; };
+		F3560FDA241F4BC700E0CE9A /* HCCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCCollectionViewCell.h; sourceTree = "<group>"; };
+		F3560FDB241F4BC700E0CE9A /* HCCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCCollectionViewCell.m; sourceTree = "<group>"; };
+		F3560FDC241F4BC700E0CE9A /* HCCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCCollectionViewCell.xib; sourceTree = "<group>"; };
+		F3560FE0241F5AA000E0CE9A /* HCCollectionReusableFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCCollectionReusableFooterView.h; sourceTree = "<group>"; };
+		F3560FE1241F5AA000E0CE9A /* HCCollectionReusableFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCCollectionReusableFooterView.m; sourceTree = "<group>"; };
+		F3560FE2241F5AA000E0CE9A /* HCCollectionReusableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCCollectionReusableFooterView.xib; sourceTree = "<group>"; };
+		F3561002241F722300E0CE9A /* HCTestTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCTestTableViewController.h; sourceTree = "<group>"; };
+		F3561003241F722300E0CE9A /* HCTestTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCTestTableViewController.m; sourceTree = "<group>"; };
+		F3561004241F722300E0CE9A /* HCTestTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCTestTableViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3560F6D241F234400E0CE9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3560F67241F234400E0CE9A = {
+			isa = PBXGroup;
+			children = (
+				F3560F72241F234400E0CE9A /* HCPushSettingViewController */,
+				F3560F71241F234400E0CE9A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3560F71241F234400E0CE9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3560F70241F234400E0CE9A /* HCPushSettingViewController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3560F72241F234400E0CE9A /* HCPushSettingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3560F89241F235D00E0CE9A /* Resource */,
+				F3560FDF241F54AA00E0CE9A /* Sample Code */,
+				F3560F73241F234400E0CE9A /* AppDelegate.h */,
+				F3560F74241F234400E0CE9A /* AppDelegate.m */,
+				F3560F76241F234400E0CE9A /* ViewController.h */,
+				F3560F77241F234400E0CE9A /* ViewController.m */,
+				F3560F79241F234400E0CE9A /* Main.storyboard */,
+				F3560F7C241F234400E0CE9A /* Assets.xcassets */,
+				F3560F7E241F234500E0CE9A /* LaunchScreen.storyboard */,
+				F3560F81241F234500E0CE9A /* Info.plist */,
+				F3560F82241F234500E0CE9A /* main.m */,
+			);
+			path = HCPushSettingViewController;
+			sourceTree = "<group>";
+		};
+		F3560F89241F235D00E0CE9A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F3560F8A241F236E00E0CE9A /* HCBaseSettingViewController.h */,
+				F3560F8B241F236E00E0CE9A /* HCBaseSettingViewController.m */,
+				F3560FD2241F46DE00E0CE9A /* HCPushSettingViewController.h */,
+				F3560FD3241F46DE00E0CE9A /* HCPushSettingViewController.m */,
+				F3560F8E241F267E00E0CE9A /* HCBaseSettingViewController+TransitionAnimate.m */,
+				F3560F90241F27E500E0CE9A /* HCBaseAnimation.h */,
+				F3560F91241F27E500E0CE9A /* HCBaseAnimation.m */,
+				F3560F93241F28A000E0CE9A /* HCPushHorizonalAnimation.h */,
+				F3560F94241F28A000E0CE9A /* HCPushHorizonalAnimation.m */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F3560FDF241F54AA00E0CE9A /* Sample Code */ = {
+			isa = PBXGroup;
+			children = (
+				F3560FE6241F5B5C00E0CE9A /* Other */,
+				F3560FE7241F5B6400E0CE9A /* TestTableView */,
+				F3560FE5241F5B4900E0CE9A /* TestCollection */,
+			);
+			path = "Sample Code";
+			sourceTree = "<group>";
+		};
+		F3560FE5241F5B4900E0CE9A /* TestCollection */ = {
+			isa = PBXGroup;
+			children = (
+				F3560FD5241F49D400E0CE9A /* HCTestCollectionViewController.h */,
+				F3560FD6241F49D400E0CE9A /* HCTestCollectionViewController.m */,
+				F3560FD7241F49D400E0CE9A /* HCTestCollectionViewController.xib */,
+				F3560FDA241F4BC700E0CE9A /* HCCollectionViewCell.h */,
+				F3560FDB241F4BC700E0CE9A /* HCCollectionViewCell.m */,
+				F3560FDC241F4BC700E0CE9A /* HCCollectionViewCell.xib */,
+				F3560FE0241F5AA000E0CE9A /* HCCollectionReusableFooterView.h */,
+				F3560FE1241F5AA000E0CE9A /* HCCollectionReusableFooterView.m */,
+				F3560FE2241F5AA000E0CE9A /* HCCollectionReusableFooterView.xib */,
+			);
+			path = TestCollection;
+			sourceTree = "<group>";
+		};
+		F3560FE6241F5B5C00E0CE9A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				F3560F99241F303C00E0CE9A /* CALayer+BorderColor.h */,
+				F3560F9A241F303C00E0CE9A /* CALayer+BorderColor.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F3560FE7241F5B6400E0CE9A /* TestTableView */ = {
+			isa = PBXGroup;
+			children = (
+				F3561002241F722300E0CE9A /* HCTestTableViewController.h */,
+				F3561003241F722300E0CE9A /* HCTestTableViewController.m */,
+				F3561004241F722300E0CE9A /* HCTestTableViewController.xib */,
+			);
+			path = TestTableView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3560F6F241F234400E0CE9A /* HCPushSettingViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3560F86241F234500E0CE9A /* Build configuration list for PBXNativeTarget "HCPushSettingViewController" */;
+			buildPhases = (
+				F3560F6C241F234400E0CE9A /* Sources */,
+				F3560F6D241F234400E0CE9A /* Frameworks */,
+				F3560F6E241F234400E0CE9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HCPushSettingViewController;
+			productName = HCPushSettingViewController;
+			productReference = F3560F70241F234400E0CE9A /* HCPushSettingViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3560F68241F234400E0CE9A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = haocaihaocai;
+				TargetAttributes = {
+					F3560F6F241F234400E0CE9A = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = F3560F6B241F234400E0CE9A /* Build configuration list for PBXProject "HCPushSettingViewController" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3560F67241F234400E0CE9A;
+			productRefGroup = F3560F71241F234400E0CE9A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3560F6F241F234400E0CE9A /* HCPushSettingViewController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3560F6E241F234400E0CE9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3560F80241F234500E0CE9A /* LaunchScreen.storyboard in Resources */,
+				F3560FDE241F4BC700E0CE9A /* HCCollectionViewCell.xib in Resources */,
+				F3560FD9241F49D400E0CE9A /* HCTestCollectionViewController.xib in Resources */,
+				F3561006241F722300E0CE9A /* HCTestTableViewController.xib in Resources */,
+				F3560F7D241F234400E0CE9A /* Assets.xcassets in Resources */,
+				F3560F7B241F234400E0CE9A /* Main.storyboard in Resources */,
+				F3560FE4241F5AA000E0CE9A /* HCCollectionReusableFooterView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3560F6C241F234400E0CE9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3560FD4241F46DE00E0CE9A /* HCPushSettingViewController.m in Sources */,
+				F3560F8F241F267E00E0CE9A /* HCBaseSettingViewController+TransitionAnimate.m in Sources */,
+				F3560FE3241F5AA000E0CE9A /* HCCollectionReusableFooterView.m in Sources */,
+				F3560FD8241F49D400E0CE9A /* HCTestCollectionViewController.m in Sources */,
+				F3560F78241F234400E0CE9A /* ViewController.m in Sources */,
+				F3561005241F722300E0CE9A /* HCTestTableViewController.m in Sources */,
+				F3560F95241F28A000E0CE9A /* HCPushHorizonalAnimation.m in Sources */,
+				F3560F83241F234500E0CE9A /* main.m in Sources */,
+				F3560F75241F234400E0CE9A /* AppDelegate.m in Sources */,
+				F3560F92241F27E500E0CE9A /* HCBaseAnimation.m in Sources */,
+				F3560F9B241F303C00E0CE9A /* CALayer+BorderColor.m in Sources */,
+				F3560F8C241F236E00E0CE9A /* HCBaseSettingViewController.m in Sources */,
+				F3560FDD241F4BC700E0CE9A /* HCCollectionViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F3560F79241F234400E0CE9A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3560F7A241F234400E0CE9A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F3560F7E241F234500E0CE9A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3560F7F241F234500E0CE9A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3560F84241F234500E0CE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F3560F85241F234500E0CE9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3560F87241F234500E0CE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = HCPushSettingViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.haocai.HCPushSettingViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3560F88241F234500E0CE9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = HCPushSettingViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.haocai.HCPushSettingViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3560F6B241F234400E0CE9A /* Build configuration list for PBXProject "HCPushSettingViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3560F84241F234500E0CE9A /* Debug */,
+				F3560F85241F234500E0CE9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3560F86241F234500E0CE9A /* Build configuration list for PBXNativeTarget "HCPushSettingViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3560F87241F234500E0CE9A /* Debug */,
+				F3560F88241F234500E0CE9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3560F68241F234400E0CE9A /* Project object */;
+}
