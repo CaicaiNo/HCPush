@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HCPushSettingViewController.h"
 NS_ASSUME_NONNULL_BEGIN
 
 //Your logic ViewController

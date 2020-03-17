@@ -38,6 +38,7 @@
     HCTestTableViewController *tablevc = [[HCTestTableViewController alloc] init];
     HCPushSettingViewController *myvc = [HCPushSettingViewController settingControllerWithContentController:tablevc];
     myvc.alignment = HCBaseSettingAlignmentLeft;
+    
     [self presentViewController:myvc animated:YES completion:nil];
 }
 

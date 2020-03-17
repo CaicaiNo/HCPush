@@ -8,6 +8,7 @@
 
 #import "HCTestCollectionViewController.h"
 #import "HCCollectionViewCell.h"
+#import "HCTestTableViewController.h"
 @interface HCTestCollectionViewController () <UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -46,7 +47,15 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
     HCCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier forIndexPath:indexPath];
     cell.iconImageView.image = [UIImage imageNamed:MediaImages[indexPath.row % 4]];
     cell.nameLabel.text = MediaTitles[indexPath.row % 4];
+   
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.HCParentController) {
+        self.HCParentController.pushChildViewController = [[HCTestTableViewController alloc] init];
+    }
+    NSLog(@"%@",MediaTitles[indexPath.row % 4]);
 }
 
 #pragma mark - UICollectionViewDelegateLeftAlignedLayout
@@ -72,10 +81,6 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
         return footerView;
     }
     return nil;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%@",MediaTitles[indexPath.row % 4]);
 }
 
 #pragma mark - Rotation

@@ -7,16 +7,20 @@
 //
 
 #import "HCPushSettingViewController.h"
+#import <objc/runtime.h>
 
 @interface HCPushSettingViewController ()
 
 @end
 
-@implementation HCPushSettingViewController
+@implementation HCPushSettingViewController {
+    BOOL __viewDidLoad;
+}
 
 - (instancetype)initWithContentController:(UIViewController *)controller {
     if (self = [super init]) {
-        [self addPushControllerContent:controller];
+        [self setup];
+        [self setPushChildViewController:controller];
     }
     return self;
 }
@@ -28,7 +32,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [self updateChildViewConstraits];
+    __viewDidLoad = YES;
+}
+
+- (void)updateChildViewConstraits {
     UIView *childView = self.pushChildViewController.view;
     childView.translatesAutoresizingMaskIntoConstraints = NO;
     childView.frame = self.hcContentView.bounds;
@@ -40,9 +48,19 @@
     [self.hcContentView addConstraint:[NSLayoutConstraint constraintWithItem:childView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.hcContentView attribute:NSLayoutAttributeBottom multiplier:1 constant:0]];
 }
 
-- (void)addPushControllerContent:(UIViewController *)controller {
-    _pushChildViewController = controller;
-    [self addChildViewController:self.pushChildViewController];
+- (void)setPushChildViewController:(UIViewController * _Nonnull)pushChildViewController {
+    if (_pushChildViewController) {
+        [_pushChildViewController.view removeFromSuperview];
+    }
+    _pushChildViewController = pushChildViewController;
+    _pushChildViewController.HCParentController = self;
+    if (__viewDidLoad) {
+        [self updateChildViewConstraits];
+    }
+}
+
+- (void)setup {
+    __viewDidLoad = NO;
 }
 
 #pragma mark - lift cycle
@@ -83,6 +101,12 @@
     }
 }
 
+//- (void)dealloc {
+//#if DEBUG
+//    NSLog(@"HCPushSettingViewController dealloc");
+//#endif
+//}
+
 #pragma mark - rotation
 
 - (BOOL)shouldAutorotate {
@@ -116,5 +140,72 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+@end
+
+@implementation HCProxy
+- (instancetype)initWithTarget:(id)target {
+    _target = target;
+    return self;
+}
++ (instancetype)proxyWithTarget:(id)target {
+    return [[HCProxy alloc] initWithTarget:target];
+}
+- (id)forwardingTargetForSelector:(SEL)selector {
+    return _target;
+}
+- (void)forwardInvocation:(NSInvocation *)invocation {
+    void *null = NULL;
+    [invocation setReturnValue:&null];
+}
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)selector {
+    return [NSObject instanceMethodSignatureForSelector:@selector(init)];
+}
+- (BOOL)respondsToSelector:(SEL)aSelector {
+    return [_target respondsToSelector:aSelector];
+}
+- (BOOL)isEqual:(id)object {
+    return [_target isEqual:object];
+}
+- (NSUInteger)hash {
+    return [_target hash];
+}
+- (Class)superclass {
+    return [_target superclass];
+}
+- (Class)class {
+    return [_target class];
+}
+- (BOOL)isKindOfClass:(Class)aClass {
+    return [_target isKindOfClass:aClass];
+}
+- (BOOL)isMemberOfClass:(Class)aClass {
+    return [_target isMemberOfClass:aClass];
+}
+- (BOOL)conformsToProtocol:(Protocol *)aProtocol {
+    return [_target conformsToProtocol:aProtocol];
+}
+- (BOOL)isProxy {
+    return YES;
+}
+- (NSString *)description {
+    return [_target description];
+}
+- (NSString *)debugDescription {
+    return [_target debugDescription];
+}
+@end
+
+@implementation UIViewController (HCPush)
+
+- (HCPushSettingViewController*)HCParentController {
+    HCProxy *proxy = objc_getAssociatedObject(self, _cmd);
+    return (HCPushSettingViewController*)proxy;
+}
+
+- (void)setHCParentController:(HCPushSettingViewController*)parentController {
+    HCProxy *proxy = [HCProxy proxyWithTarget:parentController];
+    objc_setAssociatedObject(self, @selector(HCParentController), proxy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
 
 @end

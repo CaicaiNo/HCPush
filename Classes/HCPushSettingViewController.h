@@ -8,11 +8,9 @@
 
 #import "HCBaseSettingViewController.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface HCPushSettingViewController : HCBaseSettingViewController
 ///a weak point to contentController,HCPushSettingViewController add it to childViewControllers
-@property (nonatomic, weak, readonly) UIViewController *pushChildViewController;
+@property (nonatomic, strong) UIViewController *pushChildViewController;
 
 
 // viewController lifecycle block, return pushChildViewController.view
@@ -25,4 +23,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END
+@interface HCProxy : NSProxy
+@property (nonatomic, weak, readonly) id target;
+- (instancetype)initWithTarget:(id)target;
++ (instancetype)proxyWithTarget:(id)target;
+@end
+
+
+@interface UIViewController (HCPush)
+//use Proxy to avoid retain cycle
+@property (nonatomic, strong) HCPushSettingViewController *HCParentController;
+
+@end
+
