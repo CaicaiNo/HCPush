@@ -19,7 +19,11 @@ pod 'HCPushSettingViewController'
 
 2. `[!] CDN: trunk Repo update failed`
 
-podfile文件中指定source源为master source 'https://github.com/CocoaPods/Specs.git'
+podfile文件中指定source源为master 
+
+```c
+source 'https://github.com/CocoaPods/Specs.git'
+```
 
 # Requirements
 
