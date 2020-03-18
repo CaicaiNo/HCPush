@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "HCPushSettingViewController"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "A simple push setting viewController,Use for present a new viewController content"
   s.description  = "A simple push setting viewController,Use for present a new viewController content,HCPushSettingViewController will contain viewController.Support two kinds of content type."
   s.homepage     = "https://github.com/haocaihaocai"
