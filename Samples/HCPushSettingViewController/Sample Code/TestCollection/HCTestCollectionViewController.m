@@ -52,9 +52,12 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-
-    [self dismissViewControllerAnimated:YES completion:nil];
-    NSLog(@"%@",MediaTitles[indexPath.row % 4]);
+    if (self.parentViewController && [self.parentViewController isKindOfClass:[HCPushSettingViewController class]]) {
+        HCPushSettingViewController *pushSetVC = (HCPushSettingViewController*)self.parentViewController;
+        pushSetVC.pushChildViewController = [[HCTestTableViewController alloc] init];
+    }
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//    NSLog(@"%@",MediaTitles[indexPath.row % 4]);
 }
 
 #pragma mark - UICollectionViewDelegateLeftAlignedLayout
