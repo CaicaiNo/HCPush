@@ -4,7 +4,7 @@
 //
 //  Created by haocaihaocai on 2020/3/16.
 //  Copyright © 2020年 haocaihaocai. All rights reserved.
-//
+//  https://github.com/haocaihaocai/HCPushSettingViewController.git
 
 #import "HCBaseSettingViewController.h"
 #import "HCPushHorizonalAnimation.h"

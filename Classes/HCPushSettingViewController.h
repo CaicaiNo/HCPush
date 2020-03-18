@@ -4,7 +4,7 @@
 //
 //  Created by haocaihaocai on 2020/3/16.
 //  Copyright © 2020年 haocaihaocai. All rights reserved.
-//
+//  https://github.com/haocaihaocai/HCPushSettingViewController.git
 
 #import "HCBaseSettingViewController.h"
 
@@ -23,16 +23,4 @@
 
 @end
 
-@interface HCProxy : NSProxy
-@property (nonatomic, weak, readonly) id target;
-- (instancetype)initWithTarget:(id)target;
-+ (instancetype)proxyWithTarget:(id)target;
-@end
-
-
-@interface UIViewController (HCPush)
-//use Proxy to avoid retain cycle
-@property (nonatomic, strong) HCPushSettingViewController *HCParentController;
-
-@end
 

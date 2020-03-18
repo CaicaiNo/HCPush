@@ -52,9 +52,8 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.HCParentController) {
-        self.HCParentController.pushChildViewController = [[HCTestTableViewController alloc] init];
-    }
+
+    [self dismissViewControllerAnimated:YES completion:nil];
     NSLog(@"%@",MediaTitles[indexPath.row % 4]);
 }
 

@@ -51,9 +51,12 @@
 - (void)setPushChildViewController:(UIViewController * _Nonnull)pushChildViewController {
     if (_pushChildViewController) {
         [_pushChildViewController.view removeFromSuperview];
+        [_pushChildViewController removeFromParentViewController];
+        
     }
     _pushChildViewController = pushChildViewController;
-    _pushChildViewController.HCParentController = self;
+    // to resolve _pushChildViewController dismiss action
+    [self addChildViewController:_pushChildViewController];
     if (__viewDidLoad) {
         [self updateChildViewConstraits];
     }
@@ -130,82 +133,6 @@
     }
     //TODO:You can fix this value to set default
     return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeRight;
-}
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-@end
-
-@implementation HCProxy
-- (instancetype)initWithTarget:(id)target {
-    _target = target;
-    return self;
-}
-+ (instancetype)proxyWithTarget:(id)target {
-    return [[HCProxy alloc] initWithTarget:target];
-}
-- (id)forwardingTargetForSelector:(SEL)selector {
-    return _target;
-}
-- (void)forwardInvocation:(NSInvocation *)invocation {
-    void *null = NULL;
-    [invocation setReturnValue:&null];
-}
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)selector {
-    return [NSObject instanceMethodSignatureForSelector:@selector(init)];
-}
-- (BOOL)respondsToSelector:(SEL)aSelector {
-    return [_target respondsToSelector:aSelector];
-}
-- (BOOL)isEqual:(id)object {
-    return [_target isEqual:object];
-}
-- (NSUInteger)hash {
-    return [_target hash];
-}
-- (Class)superclass {
-    return [_target superclass];
-}
-- (Class)class {
-    return [_target class];
-}
-- (BOOL)isKindOfClass:(Class)aClass {
-    return [_target isKindOfClass:aClass];
-}
-- (BOOL)isMemberOfClass:(Class)aClass {
-    return [_target isMemberOfClass:aClass];
-}
-- (BOOL)conformsToProtocol:(Protocol *)aProtocol {
-    return [_target conformsToProtocol:aProtocol];
-}
-- (BOOL)isProxy {
-    return YES;
-}
-- (NSString *)description {
-    return [_target description];
-}
-- (NSString *)debugDescription {
-    return [_target debugDescription];
-}
-@end
-
-@implementation UIViewController (HCPush)
-
-- (HCPushSettingViewController*)HCParentController {
-    HCProxy *proxy = objc_getAssociatedObject(self, _cmd);
-    return (HCPushSettingViewController*)proxy;
-}
-
-- (void)setHCParentController:(HCPushSettingViewController*)parentController {
-    HCProxy *proxy = [HCProxy proxyWithTarget:parentController];
-    objc_setAssociatedObject(self, @selector(HCParentController), proxy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
