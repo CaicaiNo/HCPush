@@ -121,29 +121,46 @@
 
 - (HCTagsContentView * (^) (BOOL defaultSelected))defaultSelectedSet {
     return ^(BOOL defaultSelected) {
-        self->_defaultSelected = defaultSelected;
+        self.defaultSelected = defaultSelected;
+        [self setTagStyle];
         return self;
     };
 }
 
 - (HCTagsContentView * (^) (BOOL allowSelect))allowSelectSet{
     return ^(BOOL allowSelect) {
-        self->_allowSelect = allowSelect;
+        self.allowSelect = allowSelect;
+        [self setTagStyle];
         return self;
     };
 }
 - (HCTagsContentView * (^) (BOOL supportMultiSelect))supportMultiSelectSet {
     return ^(BOOL supportMultiSelect) {
-        self->_supportMultiSelect = supportMultiSelect;
+        self.supportMultiSelect = supportMultiSelect;
+        [self setTagStyle];
         return self;
     };
 }
 
 - (HCTagsContentView * (^) (GSTagHandler handler))handlerSet {
     return ^(GSTagHandler handler) {
-        self->_handler = handler;
+        self.handler = handler;
         return self;
     };
+}
+
+- (UIColor *)selectColor {
+    if (!_selectColor) {
+        _selectColor = [UIColor whiteColor];
+    }
+    return _selectColor;
+}
+
+- (UIColor *)noSelectColor {
+    if (!_noSelectColor) {
+        _noSelectColor = [UIColor whiteColor];
+    }
+    return _noSelectColor;
 }
 
 - (void)setTagTexts:(NSArray<NSString *> *)tagTexts {
@@ -176,14 +193,14 @@
             if (!_supportMultiSelect) {
                 if (_selectIndex != -1) {
                     UILabel *label1 = [_tagViews objectAtIndex:_selectIndex];
-                    label1.textColor = [UIColor grayColor];
+                    label1.textColor = self.selectColor;
                     label1.backgroundColor = [UIColor clearColor];
                     label1.layer.borderColor = HCSEARCH_COLOR(223, 223, 223).CGColor;
                     label1.layer.borderWidth = 0.5;
                 }
                 _selectIndex = selectIndex;
                 UILabel *label = [self viewWithTag:INDEX_NUM + selectIndex];
-                label.textColor = [UIColor whiteColor];
+                label.textColor = self.noSelectColor;
                 label.layer.borderColor = nil;
                 label.layer.borderWidth = 0.0;
                 label.backgroundColor = [_tagColors objectAtIndex:_selectIndex];
@@ -201,13 +218,13 @@
         if (!_supportMultiSelect) {
             if (_selectIndex != -1) {
                 UILabel *label1 = [_tagViews objectAtIndex:_selectIndex];
-                label1.textColor = [UIColor grayColor];
+                label1.textColor = self.selectColor;
                 label1.backgroundColor = [UIColor clearColor];
                 label1.layer.borderColor = HCSEARCH_COLOR(223, 223, 223).CGColor;
                 label1.layer.borderWidth = 0.5;
             }
             _selectIndex = index;
-            label.textColor = [UIColor whiteColor];
+            label.textColor = self.noSelectColor;
             label.layer.borderColor = nil;
             label.layer.borderWidth = 0.0;
             label.backgroundColor = [_tagColors objectAtIndex:_selectIndex];
@@ -226,7 +243,7 @@
             if (!selectedNum) {
                 [_selectedIndexs addObject:[NSNumber numberWithInteger:index]];
                 _selectIndex = index;
-                label.textColor = [UIColor whiteColor];
+                label.textColor = self.noSelectColor;
                 label.layer.borderColor = nil;
                 label.layer.borderWidth = 0.0;
                 label.backgroundColor = [_tagColors objectAtIndex:_selectIndex];
@@ -236,7 +253,7 @@
                 }
             }else{
                 [_selectedIndexs removeObject:selectedNum];
-                label.textColor = [UIColor grayColor];
+                label.textColor = self.selectColor;
                 label.backgroundColor = [UIColor clearColor];
                 label.layer.borderColor = HCSEARCH_COLOR(223, 223, 223).CGColor;
                 label.layer.borderWidth = 0.5;
@@ -296,36 +313,37 @@
 }
 
 - (void)setTagStyle {
-    NSMutableArray *colors = [NSMutableArray array];
+    if (!_tagColors || _tagColors.count == 0) {
+        NSMutableArray *colors = [NSMutableArray array];
+        for (int i = 0; i < _tagViews.count; i++) {
+            [colors addObject:HCSEARCH_COLORPolRandomColor];
+        }
+        _tagColors = colors;
+    }
+    
     for (int i = 0; i < _tagViews.count; i++) {
         UILabel *tag = _tagViews[i];
         if (_allowSelect && !_defaultSelected) {
-            
-            tag.textColor = [UIColor grayColor];
+            tag.textColor = self.noSelectColor;
             tag.backgroundColor = [UIColor clearColor];
             tag.layer.borderColor = HCSEARCH_COLOR(223, 223, 223).CGColor;
             tag.layer.borderWidth = 0.5;
             if (_selectIndex == i) {
-                tag.textColor = [UIColor whiteColor];
-                UIColor *color = HCSEARCH_COLORPolRandomColor;
+                tag.textColor = self.selectColor;;
+                UIColor *color = _tagColors[i];
                 tag.backgroundColor = color;
-                [colors addObject:color];
-            }else{
-                [colors addObject:HCSEARCH_COLORPolRandomColor];
             }
         }else{
-            tag.textColor = [UIColor whiteColor];
+            tag.textColor = self.noSelectColor;
             tag.layer.borderColor = nil;
             tag.layer.borderWidth = 0.0;
-            tag.backgroundColor = HCSEARCH_COLORPolRandomColor;
-            [colors addObject:tag.backgroundColor];
+            tag.backgroundColor = _tagColors[i];
             if (_supportMultiSelect) {
                 NSInteger index = [_tagViews indexOfObject:tag];
                 [_selectedIndexs addObject:[NSNumber numberWithInteger:index]];
             }
         }
     }
-    _tagColors = colors;
 }
 
 
@@ -343,7 +361,7 @@
     label.userInteractionEnabled = YES;
     label.font = [UIFont systemFontOfSize:12];
     label.text = title;
-    label.textColor = [UIColor grayColor];
+    label.textColor = self.noSelectColor;;
     label.backgroundColor = [UIColor gs_colorWithHexString:@"#fafafa"];
     label.layer.cornerRadius = 3;
     label.clipsToBounds = YES;

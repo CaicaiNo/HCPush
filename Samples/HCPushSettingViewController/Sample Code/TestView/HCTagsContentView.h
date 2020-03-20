@@ -28,6 +28,9 @@ typedef void(^GSTagHandler)(NSInteger index, NSString *text,BOOL isSelect);
 
 ///< 选中index,默认为-1
 @property (nonatomic, assign) NSInteger selectIndex;
+///UIColor
+@property (nonatomic, strong) UIColor *selectColor;
+@property (nonatomic, strong) UIColor *noSelectColor;
 
 - (instancetype)initWithFrame:(CGRect)frame tags:(NSArray <NSString *>*)tagTexts handler:(void (^)(NSInteger index, NSString *text,BOOL isSelect))handler;
 
