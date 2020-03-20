@@ -11,8 +11,8 @@
 @interface HCPushSettingViewController : HCBaseSettingViewController
 ///a weak point to contentController,HCPushSettingViewController add it to childViewControllers
 @property (nonatomic, strong) UIViewController *pushChildViewController;
-
-
+///if you only want to add a content view ,not a viewController,use this property
+@property (nonatomic, strong) UIView *childView;
 // viewController lifecycle block, return pushChildViewController.view
 @property (copy, nonatomic) void (^viewWillShowHandler)(UIView *childView);
 @property (copy, nonatomic) void (^viewDidShowHandler)(UIView *childView);

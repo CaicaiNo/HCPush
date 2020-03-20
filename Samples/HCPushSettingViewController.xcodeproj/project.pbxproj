@@ -27,6 +27,9 @@
 		F3561026241F8C5100E0CE9A /* HCBaseSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F356101F241F8C5100E0CE9A /* HCBaseSettingViewController.m */; };
 		F3561027241F8C5100E0CE9A /* HCPushHorizonalAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3561021241F8C5100E0CE9A /* HCPushHorizonalAnimation.m */; };
 		F3561028241F8C5100E0CE9A /* HCPushSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3561023241F8C5100E0CE9A /* HCPushSettingViewController.m */; };
+		F3E96E2924247F07006182B9 /* HCTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E96E2824247F07006182B9 /* HCTestView.m */; };
+		F3E96E2C24247F63006182B9 /* HCTagsContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E96E2B24247F63006182B9 /* HCTagsContentView.m */; };
+		F3E96E2F24247FC8006182B9 /* UIView+HCRectExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E96E2D24247FC8006182B9 /* UIView+HCRectExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +66,12 @@
 		F3561021241F8C5100E0CE9A /* HCPushHorizonalAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPushHorizonalAnimation.m; sourceTree = "<group>"; };
 		F3561022241F8C5100E0CE9A /* HCPushSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCPushSettingViewController.h; sourceTree = "<group>"; };
 		F3561023241F8C5100E0CE9A /* HCPushSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPushSettingViewController.m; sourceTree = "<group>"; };
+		F3E96E2724247F07006182B9 /* HCTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCTestView.h; sourceTree = "<group>"; };
+		F3E96E2824247F07006182B9 /* HCTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCTestView.m; sourceTree = "<group>"; };
+		F3E96E2A24247F63006182B9 /* HCTagsContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTagsContentView.h; sourceTree = "<group>"; };
+		F3E96E2B24247F63006182B9 /* HCTagsContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTagsContentView.m; sourceTree = "<group>"; };
+		F3E96E2D24247FC8006182B9 /* UIView+HCRectExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HCRectExtension.m"; sourceTree = "<group>"; };
+		F3E96E2E24247FC8006182B9 /* UIView+HCRectExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HCRectExtension.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,13 +123,14 @@
 			isa = PBXGroup;
 			children = (
 				F3560FE6241F5B5C00E0CE9A /* Other */,
-				F3560FE7241F5B6400E0CE9A /* TestTableView */,
-				F3560FE5241F5B4900E0CE9A /* TestCollection */,
+				F3E96E2624247ED6006182B9 /* TestView */,
+				F3560FE7241F5B6400E0CE9A /* TestTableVC */,
+				F3560FE5241F5B4900E0CE9A /* TestCollectionVC */,
 			);
 			path = "Sample Code";
 			sourceTree = "<group>";
 		};
-		F3560FE5241F5B4900E0CE9A /* TestCollection */ = {
+		F3560FE5241F5B4900E0CE9A /* TestCollectionVC */ = {
 			isa = PBXGroup;
 			children = (
 				F3560FD5241F49D400E0CE9A /* HCTestCollectionViewController.h */,
@@ -133,7 +143,7 @@
 				F3560FE1241F5AA000E0CE9A /* HCCollectionReusableFooterView.m */,
 				F3560FE2241F5AA000E0CE9A /* HCCollectionReusableFooterView.xib */,
 			);
-			path = TestCollection;
+			path = TestCollectionVC;
 			sourceTree = "<group>";
 		};
 		F3560FE6241F5B5C00E0CE9A /* Other */ = {
@@ -145,14 +155,14 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
-		F3560FE7241F5B6400E0CE9A /* TestTableView */ = {
+		F3560FE7241F5B6400E0CE9A /* TestTableVC */ = {
 			isa = PBXGroup;
 			children = (
 				F3561002241F722300E0CE9A /* HCTestTableViewController.h */,
 				F3561003241F722300E0CE9A /* HCTestTableViewController.m */,
 				F3561004241F722300E0CE9A /* HCTestTableViewController.xib */,
 			);
-			path = TestTableView;
+			path = TestTableVC;
 			sourceTree = "<group>";
 		};
 		F356101A241F8C5000E0CE9A /* Classes */ = {
@@ -170,6 +180,19 @@
 			);
 			name = Classes;
 			path = ../../Classes;
+			sourceTree = "<group>";
+		};
+		F3E96E2624247ED6006182B9 /* TestView */ = {
+			isa = PBXGroup;
+			children = (
+				F3E96E2E24247FC8006182B9 /* UIView+HCRectExtension.h */,
+				F3E96E2D24247FC8006182B9 /* UIView+HCRectExtension.m */,
+				F3E96E2A24247F63006182B9 /* HCTagsContentView.h */,
+				F3E96E2B24247F63006182B9 /* HCTagsContentView.m */,
+				F3E96E2724247F07006182B9 /* HCTestView.h */,
+				F3E96E2824247F07006182B9 /* HCTestView.m */,
+			);
+			path = TestView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,13 +272,16 @@
 				F3561025241F8C5100E0CE9A /* HCBaseSettingViewController+TransitionAnimate.m in Sources */,
 				F3561026241F8C5100E0CE9A /* HCBaseSettingViewController.m in Sources */,
 				F3560FE3241F5AA000E0CE9A /* HCCollectionReusableFooterView.m in Sources */,
+				F3E96E2C24247F63006182B9 /* HCTagsContentView.m in Sources */,
 				F3560FD8241F49D400E0CE9A /* HCTestCollectionViewController.m in Sources */,
 				F3560F78241F234400E0CE9A /* ViewController.m in Sources */,
+				F3E96E2924247F07006182B9 /* HCTestView.m in Sources */,
 				F3561005241F722300E0CE9A /* HCTestTableViewController.m in Sources */,
 				F3561027241F8C5100E0CE9A /* HCPushHorizonalAnimation.m in Sources */,
 				F3560F83241F234500E0CE9A /* main.m in Sources */,
 				F3560F75241F234400E0CE9A /* AppDelegate.m in Sources */,
 				F3560F9B241F303C00E0CE9A /* CALayer+BorderColor.m in Sources */,
+				F3E96E2F24247FC8006182B9 /* UIView+HCRectExtension.m in Sources */,
 				F3561024241F8C5100E0CE9A /* HCBaseAnimation.m in Sources */,
 				F3560FDD241F4BC700E0CE9A /* HCCollectionViewCell.m in Sources */,
 				F3561028241F8C5100E0CE9A /* HCPushSettingViewController.m in Sources */,

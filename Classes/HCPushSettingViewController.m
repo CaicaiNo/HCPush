@@ -37,9 +37,21 @@
 }
 
 - (void)updateChildViewConstraits {
-    UIView *childView = self.pushChildViewController.view;
-    childView.translatesAutoresizingMaskIntoConstraints = NO;
-    childView.frame = self.hcContentView.bounds;
+    
+    UIView *childView = nil;
+    if (_pushChildViewController != nil) {
+        childView = self.pushChildViewController.view;
+        childView.translatesAutoresizingMaskIntoConstraints = NO;
+        childView.frame = self.hcContentView.bounds;
+    }else if (_childView != nil) {
+        childView = self.childView;
+        childView.translatesAutoresizingMaskIntoConstraints = NO;
+        childView.frame = self.hcContentView.bounds;
+    }else {
+        //you don`t have any content to show
+        NSLog(@"[HCPushSettingViewController] Error : you don`t have any content to show");
+        return;
+    }
     [self.hcContentView addSubview:childView];
     ///must add to hcContentView, not self.view
     [self.hcContentView addConstraint:[NSLayoutConstraint constraintWithItem:childView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.hcContentView attribute:NSLayoutAttributeLeft multiplier:1 constant:0]];
@@ -52,11 +64,33 @@
     if (_pushChildViewController) {
         [_pushChildViewController.view removeFromSuperview];
         [_pushChildViewController removeFromParentViewController];
-        
+        _pushChildViewController = nil;
+    }
+    if (_childView) {
+        [_childView removeFromSuperview];
+        _childView = nil;
     }
     _pushChildViewController = pushChildViewController;
     // to resolve _pushChildViewController dismiss action
     [self addChildViewController:_pushChildViewController];
+    if (__viewDidLoad) {
+        [self updateChildViewConstraits];
+    }
+}
+
+- (void)setChildView:(UIView *)childView {
+    if (_pushChildViewController) {
+        [_pushChildViewController.view removeFromSuperview];
+        [_pushChildViewController removeFromParentViewController];
+        _pushChildViewController = nil;
+    }
+    if (_childView) {
+        [_childView removeFromSuperview];
+        _childView = nil;
+    }
+    
+    _childView = childView;
+    // to resolve _pushChildViewController dismiss action
     if (__viewDidLoad) {
         [self updateChildViewConstraits];
     }

@@ -59,14 +59,35 @@
                                     <action selector="pushFromLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0nw-S0-Ein"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g13-CH-QdW">
+                                <rect key="frame" x="106" y="331" width="163" height="29"/>
+                                <state key="normal" title="推出UIView">
+                                    <color key="titleColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
+                                        <color key="value" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pushView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JCp-V7-pDR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93398231267929077" green="0.92881602048873901" blue="0.70710557699203491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ePn-Dy-Qlo" firstAttribute="top" secondItem="HhX-WU-997" secondAttribute="bottom" constant="20" id="9sI-lL-2q4"/>
                             <constraint firstItem="ePn-Dy-Qlo" firstAttribute="height" secondItem="HhX-WU-997" secondAttribute="height" id="Bil-KG-ZVm"/>
                             <constraint firstItem="ePn-Dy-Qlo" firstAttribute="centerX" secondItem="HhX-WU-997" secondAttribute="centerX" id="CLi-f7-dJ7"/>
+                            <constraint firstItem="g13-CH-QdW" firstAttribute="width" secondItem="ePn-Dy-Qlo" secondAttribute="width" id="LZx-aI-0di"/>
                             <constraint firstItem="ePn-Dy-Qlo" firstAttribute="width" secondItem="HhX-WU-997" secondAttribute="width" id="obW-e9-uqh"/>
                             <constraint firstItem="HhX-WU-997" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qHv-nP-Xnc"/>
+                            <constraint firstItem="g13-CH-QdW" firstAttribute="height" secondItem="ePn-Dy-Qlo" secondAttribute="height" id="qVS-ZK-HFe"/>
+                            <constraint firstItem="g13-CH-QdW" firstAttribute="top" secondItem="ePn-Dy-Qlo" secondAttribute="bottom" constant="14" id="rr6-iX-ftR"/>
+                            <constraint firstItem="g13-CH-QdW" firstAttribute="centerX" secondItem="ePn-Dy-Qlo" secondAttribute="centerX" id="sJo-TS-cwl"/>
                             <constraint firstItem="HhX-WU-997" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-80" id="yrN-cq-Icl"/>
                         </constraints>
                     </view>

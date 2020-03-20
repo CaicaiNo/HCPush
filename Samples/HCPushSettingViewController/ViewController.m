@@ -10,9 +10,10 @@
 #import "HCPushSettingViewController.h"
 #import "HCTestCollectionViewController.h"
 #import "HCTestTableViewController.h"
-
+#import "HCTestView.h"
 
 @interface ViewController ()
+
 
 @end
 
@@ -21,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+  
 }
 
 - (IBAction)pushFromRight:(id)sender {
@@ -39,6 +41,13 @@
     HCPushSettingViewController *myvc = [HCPushSettingViewController settingControllerWithContentController:tablevc];
     myvc.alignment = HCBaseSettingAlignmentLeft;
     
+    [self presentViewController:myvc animated:YES completion:nil];
+}
+
+- (IBAction)pushView:(id)sender {
+    HCTestView *tagview = [[HCTestView alloc] init];
+    HCPushSettingViewController *myvc = [[HCPushSettingViewController alloc] init];
+    myvc.childView = tagview;
     [self presentViewController:myvc animated:YES completion:nil];
 }
 
