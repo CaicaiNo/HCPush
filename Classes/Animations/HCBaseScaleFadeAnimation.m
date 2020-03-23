@@ -8,6 +8,7 @@
 
 #import "HCBaseScaleFadeAnimation.h"
 #import "HCBaseViewController.h"
+
 @implementation HCBaseScaleFadeAnimation
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext

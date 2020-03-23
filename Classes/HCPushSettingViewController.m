@@ -54,10 +54,18 @@
     }
     [self.hcContentView addSubview:childView];
     ///must add to hcContentView, not self.view
-    [self.hcContentView addConstraint:[NSLayoutConstraint constraintWithItem:childView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.hcContentView attribute:NSLayoutAttributeLeft multiplier:1 constant:0]];
-    [self.hcContentView addConstraint:[NSLayoutConstraint constraintWithItem:childView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.hcContentView attribute:NSLayoutAttributeRight multiplier:1 constant:0]];
-    [self.hcContentView addConstraint:[NSLayoutConstraint constraintWithItem:childView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.hcContentView attribute:NSLayoutAttributeTop multiplier:1 constant:0]];
-    [self.hcContentView addConstraint:[NSLayoutConstraint constraintWithItem:childView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.hcContentView attribute:NSLayoutAttributeBottom multiplier:1 constant:0]];
+    NSMutableArray *constraints = [NSMutableArray array];
+    
+    [constraints addObject:[NSLayoutConstraint constraintWithItem:childView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.hcContentView attribute:NSLayoutAttributeLeft multiplier:1 constant:0]];
+    [constraints addObject:[NSLayoutConstraint constraintWithItem:childView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.hcContentView attribute:NSLayoutAttributeRight multiplier:1 constant:0]];
+    [constraints addObject:[NSLayoutConstraint constraintWithItem:childView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.hcContentView attribute:NSLayoutAttributeTop multiplier:1 constant:0]];
+    [constraints addObject:[NSLayoutConstraint constraintWithItem:childView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.hcContentView attribute:NSLayoutAttributeBottom multiplier:1 constant:0]];
+    
+    for (NSLayoutConstraint *layout in constraints) {
+        layout.priority = 990.f;
+    }
+    
+    [self.hcContentView addConstraints:constraints];
 }
 
 - (void)setPushChildViewController:(UIViewController * _Nonnull)pushChildViewController {

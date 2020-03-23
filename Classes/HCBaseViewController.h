@@ -42,10 +42,10 @@ typedef NS_ENUM(NSInteger, HCBaseTransitionAnimation) {
 ///The final view postion,default is Right
 @property (nonatomic, assign) HCPushSettingAlignment alignment;
 
-//transition animation
+///transition animation
 @property (nonatomic, assign) HCBaseTransitionAnimation transitionAnimation;
 
-//custom transition class
+///custom transition class
 @property (nonatomic, assign) Class transitionAnimationClass;
 
 ///Transition is animate,default is YES

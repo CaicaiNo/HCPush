@@ -33,6 +33,7 @@
 		F3E96ED2242865D3006182B9 /* HCBaseDropDownAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E96ECC242865D3006182B9 /* HCBaseDropDownAnimation.m */; };
 		F3E96ED3242865D3006182B9 /* HCBaseFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E96ECE242865D3006182B9 /* HCBaseFadeAnimation.m */; };
 		F3E96ED4242865D3006182B9 /* HCBaseScaleFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E96ED0242865D3006182B9 /* HCBaseScaleFadeAnimation.m */; };
+		F3E96EE024287B44006182B9 /* HCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E96EDF24287B44006182B9 /* HCAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,8 @@
 		F3E96ECE242865D3006182B9 /* HCBaseFadeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBaseFadeAnimation.m; sourceTree = "<group>"; };
 		F3E96ECF242865D3006182B9 /* HCBaseScaleFadeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBaseScaleFadeAnimation.h; sourceTree = "<group>"; };
 		F3E96ED0242865D3006182B9 /* HCBaseScaleFadeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBaseScaleFadeAnimation.m; sourceTree = "<group>"; };
+		F3E96EDE24287B44006182B9 /* HCAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCAlertView.h; sourceTree = "<group>"; };
+		F3E96EDF24287B44006182B9 /* HCAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,7 @@
 		F3560FDF241F54AA00E0CE9A /* Sample Code */ = {
 			isa = PBXGroup;
 			children = (
+				F3E96EDD24287656006182B9 /* Alert */,
 				F3560FE6241F5B5C00E0CE9A /* Other */,
 				F3E96E2624247ED6006182B9 /* TestView */,
 				F3560FE7241F5B6400E0CE9A /* TestTableVC */,
@@ -216,6 +220,15 @@
 				F3E96ED0242865D3006182B9 /* HCBaseScaleFadeAnimation.m */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		F3E96EDD24287656006182B9 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				F3E96EDE24287B44006182B9 /* HCAlertView.h */,
+				F3E96EDF24287B44006182B9 /* HCAlertView.m */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +319,7 @@
 				F3560F9B241F303C00E0CE9A /* CALayer+BorderColor.m in Sources */,
 				F3E96ED2242865D3006182B9 /* HCBaseDropDownAnimation.m in Sources */,
 				F3E96E2F24247FC8006182B9 /* UIView+HCRectExtension.m in Sources */,
+				F3E96EE024287B44006182B9 /* HCAlertView.m in Sources */,
 				F3561024241F8C5100E0CE9A /* HCBaseAnimation.m in Sources */,
 				F3560FDD241F4BC700E0CE9A /* HCCollectionViewCell.m in Sources */,
 				F3561028241F8C5100E0CE9A /* HCPushSettingViewController.m in Sources */,
