@@ -6,9 +6,9 @@
 //  Copyright © 2020年 haocaihaocai. All rights reserved.
 //
 
-#import "HCPushHorizonalAnimation.h"
+#import "HCPushAnimation.h"
 
-@implementation HCPushHorizonalAnimation
+@implementation HCPushAnimation
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
@@ -20,12 +20,12 @@
 
 - (void)presentAnimateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    HCBaseSettingViewController *settingvc = (HCBaseSettingViewController *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    HCBaseViewController *settingvc = (HCBaseViewController *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     settingvc.backgroundView.alpha = 0.0;
     
     if (settingvc.isTransitionAnimate) {
         CGAffineTransform transform;
-        if (settingvc.alignment == HCBaseSettingAlignmentRight) {
+        if (settingvc.alignment == HCPushSettingAlignmentRight) {
             transform = CGAffineTransformMakeTranslation(settingvc.hcContentView.bounds.size.width, 0);
         }else {
             transform = CGAffineTransformMakeTranslation(-settingvc.hcContentView.bounds.size.width, 0);
@@ -59,11 +59,11 @@
 
 - (void)dismissAnimateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    HCBaseSettingViewController *settingvc = (HCBaseSettingViewController *)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    HCBaseViewController *settingvc = (HCBaseViewController *)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     if (settingvc.isTransitionAnimate) {
         [UIView animateWithDuration:0.25 animations:^{
             CGAffineTransform transform;
-            if (settingvc.alignment == HCBaseSettingAlignmentRight) {
+            if (settingvc.alignment == HCPushSettingAlignmentRight) {
                 transform = CGAffineTransformMakeTranslation(settingvc.hcContentView.bounds.size.width, 0);
             }else {
                 transform = CGAffineTransformMakeTranslation(-settingvc.hcContentView.bounds.size.width, 0);

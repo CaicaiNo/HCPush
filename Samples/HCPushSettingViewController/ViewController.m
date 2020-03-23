@@ -39,7 +39,7 @@
 - (IBAction)pushFromLeft:(id)sender {
     HCTestTableViewController *tablevc = [[HCTestTableViewController alloc] init];
     HCPushSettingViewController *myvc = [HCPushSettingViewController settingControllerWithContentController:tablevc];
-    myvc.alignment = HCBaseSettingAlignmentLeft;
+    myvc.alignment = HCPushSettingAlignmentLeft;
     
     [self presentViewController:myvc animated:YES completion:nil];
 }
@@ -49,6 +49,17 @@
     HCPushSettingViewController *myvc = [[HCPushSettingViewController alloc] init];
     myvc.childView = tagview;
     [self presentViewController:myvc animated:YES completion:nil];
+}
+- (IBAction)pushFromCenter:(id)sender {
+    
+    HCTestView *tagview = [[HCTestView alloc] init];
+    HCPushSettingViewController *myvc = [[HCPushSettingViewController alloc] init];
+    myvc.alignment = HCPushSettingAlignmentCenter;
+    myvc.transitionAnimation = HCBaseTransitionAnimationFade;
+    myvc.hcContentSize = CGSizeMake(300, 500);
+    myvc.childView = tagview;
+    [self presentViewController:myvc animated:YES completion:nil];
+    
 }
 
 - (BOOL)shouldAutorotate  {

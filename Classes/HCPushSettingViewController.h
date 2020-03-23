@@ -6,9 +6,9 @@
 //  Copyright © 2020年 haocaihaocai. All rights reserved.
 //  https://github.com/haocaihaocai/HCPushSettingViewController.git
 
-#import "HCBaseSettingViewController.h"
+#import "HCBaseViewController.h"
 
-@interface HCPushSettingViewController : HCBaseSettingViewController
+@interface HCPushSettingViewController : HCBaseViewController
 ///a weak point to contentController,HCPushSettingViewController add it to childViewControllers
 @property (nonatomic, strong) UIViewController *pushChildViewController;
 ///if you only want to add a content view ,not a viewController,use this property

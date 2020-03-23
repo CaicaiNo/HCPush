@@ -8,12 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum : NSUInteger {
-    HCBaseSettingAlignmentRight, //view position is right
-    HCBaseSettingAlignmentLeft, //view postion is left
-} HCBaseSettingAlignment;
+typedef NS_ENUM(NSInteger, HCPushSettingAlignment) {
+    HCPushSettingAlignmentRight, //view position is right
+    HCPushSettingAlignmentLeft, //view postion is left
+    HCPushSettingAlignmentCenter, //view postion is center
+    HCPushSettingAlignmentTop, //view postion is top
+    HCPushSettingAlignmentBottom, //view postion is top
+};
 
-@interface HCBaseSettingViewController : UIViewController
+
+typedef NS_ENUM(NSInteger, HCBaseTransitionAnimation) {
+    HCBaseTransitionAnimationSlideDirectly = 0,
+    HCBaseTransitionAnimationFade,
+    HCBaseTransitionAnimationScaleFade,
+    HCBaseTransitionAnimationDropDown,
+    HCBaseTransitionAnimationCustom
+};
+
+@interface HCBaseViewController : UIViewController
 
 ///Content view
 @property (nonatomic, strong, readonly) UIView *hcContentView;
@@ -28,7 +40,13 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) UIEdgeInsets contentInset;
 
 ///The final view postion,default is Right
-@property (nonatomic, assign) HCBaseSettingAlignment alignment;
+@property (nonatomic, assign) HCPushSettingAlignment alignment;
+
+//transition animation
+@property (nonatomic, assign) HCBaseTransitionAnimation transitionAnimation;
+
+//custom transition class
+@property (nonatomic, assign) Class transitionAnimationClass;
 
 ///Transition is animate,default is YES
 @property (nonatomic, assign) BOOL isTransitionAnimate;
@@ -45,9 +63,10 @@ typedef enum : NSUInteger {
 ///dismiss controller completed block
 @property (nonatomic, copy) void (^dismissComplete)(void);
 
+
 @end
 
 
-@interface HCBaseSettingViewController (TransitionAnimate)<UIViewControllerTransitioningDelegate>
+@interface HCBaseViewController (TransitionAnimate)<UIViewControllerTransitioningDelegate>
 
 @end

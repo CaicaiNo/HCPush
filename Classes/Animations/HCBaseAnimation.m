@@ -52,4 +52,8 @@
     
 }
 
+- (void)dealloc {
+    NSLog(@"HCBaseAnimation dealloc");
+}
+
 @end

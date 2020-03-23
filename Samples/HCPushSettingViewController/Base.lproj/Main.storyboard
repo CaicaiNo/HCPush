@@ -76,12 +76,51 @@
                                     <action selector="pushView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JCp-V7-pDR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvy-sX-YeJ">
+                                <rect key="frame" x="106" y="331" width="163" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="推出UIView">
+                                    <color key="titleColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
+                                        <color key="value" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pushView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hib-KV-CgV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoV-fk-xWz">
+                                <rect key="frame" x="106" y="378" width="163" height="29"/>
+                                <state key="normal" title="中心推出">
+                                    <color key="titleColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
+                                        <color key="value" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pushFromCenter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ggj-oy-r8O"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93398231267929077" green="0.92881602048873901" blue="0.70710557699203491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="qoV-fk-xWz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3fd-7e-Qa4"/>
+                            <constraint firstItem="qoV-fk-xWz" firstAttribute="top" secondItem="g13-CH-QdW" secondAttribute="bottom" constant="18" id="5lG-1V-pQJ"/>
                             <constraint firstItem="ePn-Dy-Qlo" firstAttribute="top" secondItem="HhX-WU-997" secondAttribute="bottom" constant="20" id="9sI-lL-2q4"/>
                             <constraint firstItem="ePn-Dy-Qlo" firstAttribute="height" secondItem="HhX-WU-997" secondAttribute="height" id="Bil-KG-ZVm"/>
                             <constraint firstItem="ePn-Dy-Qlo" firstAttribute="centerX" secondItem="HhX-WU-997" secondAttribute="centerX" id="CLi-f7-dJ7"/>
+                            <constraint firstItem="qoV-fk-xWz" firstAttribute="height" secondItem="ePn-Dy-Qlo" secondAttribute="height" id="IgP-TU-UdK"/>
+                            <constraint firstItem="qoV-fk-xWz" firstAttribute="width" secondItem="ePn-Dy-Qlo" secondAttribute="width" id="J65-Nv-vUf"/>
                             <constraint firstItem="g13-CH-QdW" firstAttribute="width" secondItem="ePn-Dy-Qlo" secondAttribute="width" id="LZx-aI-0di"/>
                             <constraint firstItem="ePn-Dy-Qlo" firstAttribute="width" secondItem="HhX-WU-997" secondAttribute="width" id="obW-e9-uqh"/>
                             <constraint firstItem="HhX-WU-997" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qHv-nP-Xnc"/>
