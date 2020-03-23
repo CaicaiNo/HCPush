@@ -67,7 +67,6 @@
         button.layer.cornerRadius = 22.f;
     }).action(^(HCAlertAction *action) {
         NSLog(@"click action 2");
-        exit(0);
     });
     
     

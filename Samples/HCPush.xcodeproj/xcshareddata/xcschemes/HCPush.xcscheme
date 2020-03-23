@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1010"
+   LastUpgradeVersion = "1130"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F3560F6F241F234400E0CE9A"
-               BuildableName = "HCPushSettingViewController.app"
-               BlueprintName = "HCPushSettingViewController"
-               ReferencedContainer = "container:HCPushSettingViewController.xcodeproj">
+               BuildableName = "HCPush.app"
+               BlueprintName = "HCPush"
+               ReferencedContainer = "container:HCPush.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,17 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F3560F6F241F234400E0CE9A"
-            BuildableName = "HCPushSettingViewController.app"
-            BlueprintName = "HCPushSettingViewController"
-            ReferencedContainer = "container:HCPushSettingViewController.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -56,13 +45,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F3560F6F241F234400E0CE9A"
-            BuildableName = "HCPushSettingViewController.app"
-            BlueprintName = "HCPushSettingViewController"
-            ReferencedContainer = "container:HCPushSettingViewController.xcodeproj">
+            BuildableName = "HCPush.app"
+            BlueprintName = "HCPush"
+            ReferencedContainer = "container:HCPush.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -75,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F3560F6F241F234400E0CE9A"
-            BuildableName = "HCPushSettingViewController.app"
-            BlueprintName = "HCPushSettingViewController"
-            ReferencedContainer = "container:HCPushSettingViewController.xcodeproj">
+            BuildableName = "HCPush.app"
+            BlueprintName = "HCPush"
+            ReferencedContainer = "container:HCPush.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
