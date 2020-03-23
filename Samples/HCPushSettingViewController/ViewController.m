@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "HCPushSettingViewController.h"
+#import "HCPush.h"
 #import "HCTestCollectionViewController.h"
 #import "HCTestTableViewController.h"
 #import "HCTestView.h"
@@ -38,9 +38,12 @@
 
 - (IBAction)pushFromLeft:(id)sender {
     HCTestTableViewController *tablevc = [[HCTestTableViewController alloc] init];
+    HCPushSettingViewController *myvc = HCPush.create.childvc(tablevc).align(HCPushSettingAlignmentLeft).done;
+    /*
+    
     HCPushSettingViewController *myvc = [HCPushSettingViewController settingControllerWithContentController:tablevc];
     myvc.alignment = HCPushSettingAlignmentLeft;
-    
+    */
     [self presentViewController:myvc animated:YES completion:nil];
 }
 
@@ -64,7 +67,7 @@
         button.layer.cornerRadius = 22.f;
     }).action(^(HCAlertAction *action) {
         NSLog(@"click action 2");
-        
+        exit(0);
     });
     
     
@@ -89,6 +92,8 @@
         NSLog(@"click url %@",url);
     }).linkColor([UIColor colorWithRed:229/255.0 green:62/255.0 blue:51/255.0 alpha:1]);
     
+    HCPushSettingViewController *myvc = HCPush.create.align(HCPushSettingAlignmentCenter).tapDismiss(NO).transition(HCBaseTransitionAnimationDropDown).ctSize(CGSizeMake(315, 350)).childview(alert).bgColor([UIColor colorWithRed:26/255.f green:26/255.f blue:26/255.f alpha:0.5]).done;
+    /*
     HCPushSettingViewController *myvc = [[HCPushSettingViewController alloc] init];
     myvc.alignment = HCPushSettingAlignmentCenter;
     myvc.backgoundTapDismissEnable = NO;
@@ -96,6 +101,7 @@
     myvc.hcContentSize = CGSizeMake(315, 350);
     myvc.childView = alert;
     myvc.backgroundColor = [UIColor colorWithRed:26/255.f green:26/255.f blue:26/255.f alpha:0.5];
+     */
     [self presentViewController:myvc animated:YES completion:nil];
     
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044633462429074D001682B6 /* HCPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 044633452429074D001682B6 /* HCPush.m */; };
 		F3560F75241F234400E0CE9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560F74241F234400E0CE9A /* AppDelegate.m */; };
 		F3560F78241F234400E0CE9A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560F77241F234400E0CE9A /* ViewController.m */; };
 		F3560F7B241F234400E0CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3560F79241F234400E0CE9A /* Main.storyboard */; };
@@ -37,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		044633442429074D001682B6 /* HCPush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCPush.h; sourceTree = "<group>"; };
+		044633452429074D001682B6 /* HCPush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPush.m; sourceTree = "<group>"; };
 		F3560F70241F234400E0CE9A /* HCPushSettingViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HCPushSettingViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3560F73241F234400E0CE9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F3560F74241F234400E0CE9A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -187,6 +190,8 @@
 				F356101F241F8C5100E0CE9A /* HCBaseViewController.m */,
 				F3561022241F8C5100E0CE9A /* HCPushSettingViewController.h */,
 				F3561023241F8C5100E0CE9A /* HCPushSettingViewController.m */,
+				044633442429074D001682B6 /* HCPush.h */,
+				044633452429074D001682B6 /* HCPush.m */,
 			);
 			name = Classes;
 			path = ../../Classes;
@@ -306,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3561025241F8C5100E0CE9A /* HCBaseViewController+TransitionAnimate.m in Sources */,
+				044633462429074D001682B6 /* HCPush.m in Sources */,
 				F3561026241F8C5100E0CE9A /* HCBaseViewController.m in Sources */,
 				F3560FE3241F5AA000E0CE9A /* HCCollectionReusableFooterView.m in Sources */,
 				F3E96E2C24247F63006182B9 /* HCTagsContentView.m in Sources */,
