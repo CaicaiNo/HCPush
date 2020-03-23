@@ -1,0 +1,19 @@
+[INFO] output of locale.getdefaultlocale(): ('zh_CN', 'UTF-8')
+[INFO] encoding we chose in the end: UTF-8
+[INFO] Running command /usr/local/Cellar/infer/0.17.0/lib/infer/infer/bin/../lib/python/infer.py -j 4 --project-root /Users/sheng/Desktop/Git/HCPushSettingViewController/Samples --out /Users/sheng/Desktop/Git/HCPushSettingViewController/Samples/infer-out -- xcodebuild -project HCPushSettingViewController.xcodeproj -target HCPushSettingViewController -sdk iphoneos13.2
+[INFO] Path to infer script /usr/local/Cellar/infer/0.17.0/lib/infer/infer/bin/../lib/python/infer.py (/usr/local/Cellar/infer/0.17.0/lib/infer/infer/lib/python/infer.py)
+[INFO] Platform: Darwin-19.3.0-x86_64-i386-64bit
+[INFO] PATH=/Users/sheng/.rvm/gems/ruby-2.4.1/bin:/Users/sheng/.rvm/gems/ruby-2.4.1@global/bin:/Users/sheng/.rvm/rubies/ruby-2.4.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.app/Contents/MacOS:/Users/sheng/.rvm/bin:/Users/sheng/.rvm/bin
+[INFO] SHELL=/bin/bash
+[INFO] PWD=/Users/sheng/Desktop/Git/HCPushSettingViewController/Samples
+[INFO] Xcode version:
+Xcode 11.3.1
+Build version 11C504
+
+[INFO] clang version:
+Apple clang version 11.0.0 (clang-1100.0.33.17)
+Target: x86_64-apple-darwin19.3.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+[ERROR] Error during capture phase, exiting

@@ -42,16 +42,20 @@
 ///default is 280
 @property (nonatomic, assign) CGFloat alertViewWidth;
 
+
 #pragma method
 
 + (instancetype)alertViewWithTitle:(NSString *)title message:(NSString *)message;
 - (void)addAction:(HCAlertAction *)action;
 
 #pragma mark - DST
+
 + (HCAlertView *)create;
 - (HCAlertView *(^)(NSAttributedString *str))attr;
 - (HCAlertView *(^)(NSAttributedString *str))title;
 - (HCAlertView *(^)(HCAlertAction *action))add;
 - (HCAlertView *(^)(BOOL (^)(NSURL *url)))urlAction;
+- (HCAlertView *(^)(UIColor *linkColor))linkColor;
+   
 @end
 

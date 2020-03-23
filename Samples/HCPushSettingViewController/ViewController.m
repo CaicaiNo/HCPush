@@ -73,8 +73,7 @@
     
     NSMutableAttributedString *mutaStr = [[NSMutableAttributedString alloc] initWithString:originStr attributes:[NSDictionary dictionaryWithObjects:@[[UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1]] forKeys:@[NSForegroundColorAttributeName]]];
     
-    [mutaStr setAttributes:[NSDictionary dictionaryWithObjects:@[[NSURL URLWithString:@"http://www.baidu.com"]] forKeys:@[NSLinkAttributeName]] range:[originStr rangeOfString:colorStr]];
-    [mutaStr setAttributes:[NSDictionary dictionaryWithObjects:@[[UIColor colorWithRed:229/255.0 green:62/255.0 blue:51/255.0 alpha:1]] forKeys:@[NSForegroundColorAttributeName]] range:[originStr rangeOfString:colorStr]];
+    [mutaStr setAttributes:[NSDictionary dictionaryWithObjects:@[[NSURL URLWithString:@"http://www.baidu.com"],[UIColor colorWithRed:229/255.0 green:62/255.0 blue:51/255.0 alpha:1]] forKeys:@[NSLinkAttributeName,NSForegroundColorAttributeName]] range:[originStr rangeOfString:colorStr]];
     
     [mutaStr addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"PingFang SC" size: 14]
                     range:NSMakeRange(0, originStr.length)];
@@ -89,7 +88,7 @@
     HCAlertView *alert = HCAlertView.create.title([[NSAttributedString alloc] initWithString:@"隐私政策"]).attr(mutaStr).add(action).add(action2).urlAction(^(NSURL *url) {
         NSLog(@"click url %@",url);
         return YES;
-    });
+    }).linkColor([UIColor colorWithRed:229/255.0 green:62/255.0 blue:51/255.0 alpha:1]);
     
     HCPushSettingViewController *myvc = [[HCPushSettingViewController alloc] init];
     myvc.alignment = HCPushSettingAlignmentCenter;

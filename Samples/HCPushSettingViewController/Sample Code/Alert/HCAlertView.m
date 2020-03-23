@@ -105,7 +105,8 @@
 @property (nonatomic, strong) NSMutableArray *buttonConstraints;
 
 @property (nonatomic, copy) BOOL(^linkHandler)(NSURL *url);
-
+///set link text color
+@property (nonatomic, strong) UIColor *mlinkColor;
 @end
 
 @implementation HCAlertView
@@ -192,6 +193,10 @@
     messageLabel.delaysContentTouches = NO;
     [_textContentView addSubview:messageLabel];
     _messageLabel = messageLabel;
+    if (_mlinkColor) {
+        _messageLabel.linkTextAttributes = @{NSForegroundColorAttributeName:_mlinkColor};
+    }
+    
     
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedTextView:)];
     [_messageLabel addGestureRecognizer:tapRecognizer];
@@ -241,6 +246,14 @@
     return ^(BOOL (^block)(NSURL *url)) {
         
         self.linkHandler = block;
+        return self;
+    };
+}
+
+- (HCAlertView *(^)(UIColor *linkColor))linkColor {
+    return ^(UIColor *cr) {
+        self.mlinkColor = cr;
+        self.messageLabel.linkTextAttributes = @{NSForegroundColorAttributeName:self.mlinkColor};
         return self;
     };
 }
@@ -366,7 +379,10 @@
     HCAlertAction *action = _actions[button.tag - kButtonTagOffset];
     
     if (_clickedAutoHide) {
-//        [[self viewController] dismissViewControllerAnimated:NO completion:nil];
+        UIViewController *mviewController = [self viewController];
+        if (mviewController) {
+            [mviewController dismissViewControllerAnimated:NO completion:nil];
+        }
     }
     
     if (action.handler) {
@@ -387,31 +403,32 @@
 
 #pragma mark - textview delegate
 
-- (BOOL)textViewShouldEndEditing:(UITextView *)textView {
-    return NO;
-}
-- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange {
-    NSLog(@"shouldInteractWithURL url %@",URL);
-    if (self.linkHandler) {
-        return self.linkHandler(URL);
-    }else{
-        return NO;
-    }
-}
+//- (BOOL)textViewShouldEndEditing:(UITextView *)textView {
+//    return NO;
+//}
+//- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange {
+//    NSLog(@"shouldInteractWithURL url %@",URL);
+//    if (self.linkHandler) {
+//        return self.linkHandler(URL);
+//    }else{
+//        return NO;
+//    }
+//}
 
 - (void)tappedTextView:(UITapGestureRecognizer *)tapGesture {
     if (tapGesture.state != UIGestureRecognizerStateEnded) {
         return;
     }
-    NSLog(@"click");
+    
     UITextView *textView = (UITextView *)tapGesture.view;
     CGPoint tapLocation = [tapGesture locationInView:textView];
     UITextPosition *textPosition = [textView closestPositionToPoint:tapLocation];
     NSDictionary *attributes = [textView textStylingAtPosition:textPosition inDirection:UITextStorageDirectionForward];
     NSURL *url = attributes[NSLinkAttributeName];
-    
     if (url) {
-        
+        if (self.linkHandler) {
+            self.linkHandler(url);
+        }
     }
 }
 
@@ -438,17 +455,4 @@
     }
 }
 
-#pragma mark -
-
-
-
 @end
-
-
-//@implementation UITextView (HCNoMenu)
-//
-//- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
-//    return NO;
-//}
-//
-//@end
