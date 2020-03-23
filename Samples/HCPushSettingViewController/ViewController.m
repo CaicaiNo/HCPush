@@ -87,7 +87,6 @@
     
     HCAlertView *alert = HCAlertView.create.title([[NSAttributedString alloc] initWithString:@"隐私政策"]).attr(mutaStr).add(action).add(action2).urlAction(^(NSURL *url) {
         NSLog(@"click url %@",url);
-        return YES;
     }).linkColor([UIColor colorWithRed:229/255.0 green:62/255.0 blue:51/255.0 alpha:1]);
     
     HCPushSettingViewController *myvc = [[HCPushSettingViewController alloc] init];

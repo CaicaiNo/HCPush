@@ -83,7 +83,7 @@
 }
 - (HCAlertAction *(^)(void(^)(UIButton *btn)))optBtn {
     return ^(void(^block)(UIButton *btn)) {
-        block(self.button);
+        if (self.button) block(self.button);
         return self;
     };
 }
@@ -104,7 +104,7 @@
 
 @property (nonatomic, strong) NSMutableArray *buttonConstraints;
 
-@property (nonatomic, copy) BOOL(^linkHandler)(NSURL *url);
+@property (nonatomic, copy) void(^linkHandler)(NSURL *url);
 ///set link text color
 @property (nonatomic, strong) UIColor *mlinkColor;
 @end
@@ -205,7 +205,14 @@
 
 - (void)addAction:(HCAlertAction *)action
 {
+    if (!action) {
+        return;
+    }
     UIButton *button = action.button;
+    if ([_buttons containsObject:button] || !button) {
+        //filter dupicate
+        return;
+    }
     button.tag = kButtonTagOffset + _buttons.count;
     button.translatesAutoresizingMaskIntoConstraints = NO;
     [button addTarget:self action:@selector(actionButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
@@ -242,8 +249,8 @@
     };
 }
 
-- (HCAlertView *(^)(BOOL (^)(NSURL *url)))urlAction {
-    return ^(BOOL (^block)(NSURL *url)) {
+- (HCAlertView *(^)(void (^)(NSURL *url)))urlAction {
+    return ^(void (^block)(NSURL *url)) {
         
         self.linkHandler = block;
         return self;
@@ -423,13 +430,16 @@
     UITextView *textView = (UITextView *)tapGesture.view;
     CGPoint tapLocation = [tapGesture locationInView:textView];
     UITextPosition *textPosition = [textView closestPositionToPoint:tapLocation];
-    NSDictionary *attributes = [textView textStylingAtPosition:textPosition inDirection:UITextStorageDirectionForward];
-    NSURL *url = attributes[NSLinkAttributeName];
-    if (url) {
-        if (self.linkHandler) {
-            self.linkHandler(url);
+    if ([textView respondsToSelector:@selector(textStylingAtPosition:inDirection:)]) {
+        NSDictionary *attributes = [textView textStylingAtPosition:textPosition inDirection:UITextStorageDirectionForward];
+        NSURL *url = attributes[NSLinkAttributeName];
+        if (url) {
+            if (self.linkHandler) {
+                self.linkHandler(url);
+            }
         }
     }
+    
 }
 
 

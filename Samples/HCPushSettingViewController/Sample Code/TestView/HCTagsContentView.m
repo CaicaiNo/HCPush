@@ -240,7 +240,7 @@
                     break;
                 }
             }
-            if (!selectedNum) {
+            if (selectedNum == nil) {
                 [_selectedIndexs addObject:[NSNumber numberWithInteger:index]];
                 _selectIndex = index;
                 label.textColor = self.noSelectColor;

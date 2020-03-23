@@ -54,7 +54,7 @@
 - (HCAlertView *(^)(NSAttributedString *str))attr;
 - (HCAlertView *(^)(NSAttributedString *str))title;
 - (HCAlertView *(^)(HCAlertAction *action))add;
-- (HCAlertView *(^)(BOOL (^)(NSURL *url)))urlAction;
+- (HCAlertView *(^)(void (^)(NSURL *url)))urlAction;
 - (HCAlertView *(^)(UIColor *linkColor))linkColor;
    
 @end
