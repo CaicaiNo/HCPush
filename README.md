@@ -1,4 +1,4 @@
-# HCPushSettingViewController
+# HCPush
 ![language](https://img.shields.io/badge/language-Object--C-brightgreen)
 ![Version](https://img.shields.io/badge/Version-1.1.0-brightgreen)
 ![Platform](https://img.shields.io/badge/Platform-iOS-brightgreen)
