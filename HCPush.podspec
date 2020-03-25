@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name         = "HCPushSettingViewController"
+  s.name         = "HCPush"
   s.version      = "1.1.0"
   s.summary      = "A simple push setting viewController,Use for present a new viewController content"
   s.description  = "A simple push setting viewController,Use for present a new viewController content,HCPushSettingViewController will contain viewController.Support two kinds of content type."
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.author       = { "CaicaiNo" => "277715243@qq.com" }
   s.platform     = :ios, "8.0"
   s.ios.deployment_target = "8.0"
-  s.source       = { :git => "https://github.com/CaicaiNo/HCPushSettingViewController.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/CaicaiNo/HCPush.git", :tag => "#{s.version}" }
   s.source_files  = "Classes", "Classes/**/*.{h,m,mm}"
   s.public_header_files = "Classes/**/*.h"
 
