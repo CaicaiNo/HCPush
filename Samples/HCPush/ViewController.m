@@ -12,7 +12,11 @@
 #import "HCTestTableViewController.h"
 #import "HCTestView.h"
 #import "HCAlertView.h"
-@interface ViewController ()
+#import <SafariServices/SafariServices.h>
+#import <WebKit/WebKit.h>
+
+#import "HCWebViewController.h"
+@interface ViewController () <SFSafariViewControllerDelegate>
 
 
 @end
@@ -86,12 +90,13 @@
                     range:NSMakeRange(0, originStr.length)];
     [mutaStr addAttribute:NSKernAttributeName value:@(0.5)
                     range:NSMakeRange(0, originStr.length)];
-    
+    __weak typeof(self) wself = self;
     HCAlertView *alert = HCAlertView.create.title([[NSAttributedString alloc] initWithString:@"隐私政策"]).attr(mutaStr).add(action).add(action2).urlAction(^(NSURL *url) {
         NSLog(@"click url %@",url);
+        [wself presentPrivacyController:url];
     }).linkColor([UIColor colorWithRed:229/255.0 green:62/255.0 blue:51/255.0 alpha:1]);
     
-    HCPushSettingViewController *myvc = HCPush.create.align(HCPushSettingAlignmentCenter).tapDismiss(NO).transition(HCBaseTransitionAnimationDropDown).ctSize(CGSizeMake(315, 350)).childview(alert).bgColor([UIColor colorWithRed:26/255.f green:26/255.f blue:26/255.f alpha:0.5]).done;
+    HCPushSettingViewController *myvc = HCPush.create.align(HCPushSettingAlignmentCenter).tapDismiss(NO).transition(HCBaseTransitionAnimationDropDown).ctSize(CGSizeMake(315, 350)).childview(alert).bgColor([UIColor colorWithRed:26/255.f green:26/255.f blue:26/255.f alpha:0.5]).vcMask(UIInterfaceOrientationMaskPortrait).preferOrien(UIInterfaceOrientationPortrait).done;
     /*
     HCPushSettingViewController *myvc = [[HCPushSettingViewController alloc] init];
     myvc.alignment = HCPushSettingAlignmentCenter;
@@ -103,6 +108,27 @@
      */
     [self presentViewController:myvc animated:YES completion:nil];
     
+}
+
+- (void)presentPrivacyController:(NSURL*)url {
+    if (@available(iOS 9.0, *)) {
+        SFSafariViewController *sfVC = [[SFSafariViewController alloc]initWithURL:url];
+        sfVC.delegate = self;
+        UIViewController *pvc = self;
+        while (pvc.presentedViewController) {
+            pvc = pvc.presentedViewController;
+        }
+        [pvc presentViewController:sfVC animated:YES completion:nil];
+    } else {
+        // Fallback on earlier versions
+        HCWebViewController *webvc = [[HCWebViewController alloc] init];
+        webvc.url = url;
+        UIViewController *pvc = self;
+        while (pvc.presentedViewController) {
+            pvc = pvc.presentedViewController;
+        }
+        [pvc presentViewController:webvc animated:YES completion:nil];
+    }
 }
 
 - (BOOL)shouldAutorotate  {
