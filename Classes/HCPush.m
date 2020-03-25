@@ -119,6 +119,29 @@
         return self;
     };
 }
+
+/// supportedInterfaceOrientations
+- (HCPush *(^)(UIInterfaceOrientationMask mask))vcMask {
+    return ^HCPush *(UIInterfaceOrientationMask mask) {
+        self.pushVC.orientationMask = mask;
+        return self;
+    };
+}
+/// preferredInterfaceOrientationForPresentation
+- (HCPush *(^)(UIInterfaceOrientation orientation))preferOrien {
+    return ^HCPush *(UIInterfaceOrientation orientation) {
+        self.pushVC.preferrdOrientation = orientation;
+        return self;
+    };
+}
+/// shouldAutorotate
+- (HCPush *(^)(BOOL autoRotation))vcrotation {
+    return ^HCPush *(BOOL autoRotation) {
+        self.pushVC.autoRotation = autoRotation;
+        return self;
+    };
+}
+
 // viewController lifecycle block, return pushChildViewController.view
 - (HCPush *(^)(void (^)(UIView *view)))willshow {
     return ^HCPush *(void (^block)(UIView *view)) {

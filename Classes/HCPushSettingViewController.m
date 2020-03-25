@@ -154,27 +154,51 @@
 
 #pragma mark - rotation
 
+- (BOOL)autoRotation {
+    if (!_autoRotation) {
+        _autoRotation = false;
+    }
+    return _autoRotation;
+}
+
+- (UIInterfaceOrientation)preferrdOrientation {
+    if (!_preferrdOrientation) {
+        _preferrdOrientation = UIInterfaceOrientationPortrait | UIInterfaceOrientationLandscapeRight;;
+    }
+    return _preferrdOrientation;
+}
+
+- (UIInterfaceOrientationMask)orientationMask {
+    if (!_orientationMask) {
+        _orientationMask = UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeRight;
+    }
+    return _orientationMask;
+}
+
 - (BOOL)shouldAutorotate {
     if (_pushChildViewController) {
         return [_pushChildViewController shouldAutorotate];
+    }else {
+        return self.autoRotation;
     }
-    return YES;
 }
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
     if (_pushChildViewController) {
         return [_pushChildViewController preferredInterfaceOrientationForPresentation];
+    }else {
+        //TODO:You can fix this value to set default
+        return self.preferrdOrientation;
     }
-    //TODO:You can fix this value to set default
-    return UIInterfaceOrientationPortrait | UIInterfaceOrientationLandscapeRight;
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     if (_pushChildViewController) {
         return [_pushChildViewController supportedInterfaceOrientations];
+    }else {
+        //TODO:You can fix this value to set default
+        return self.orientationMask;
     }
-    //TODO:You can fix this value to set default
-    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeRight;
 }
 
 @end

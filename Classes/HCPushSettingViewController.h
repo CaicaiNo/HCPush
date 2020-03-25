@@ -13,6 +13,12 @@
 @property (nonatomic, strong) UIViewController *pushChildViewController;
 ///if you only want to add a content view ,not a viewController,use this property
 @property (nonatomic, strong) UIView *childView;
+/// supportedInterfaceOrientations
+@property (nonatomic, assign) UIInterfaceOrientationMask orientationMask;
+/// preferredInterfaceOrientationForPresentation
+@property (nonatomic, assign) UIInterfaceOrientation preferrdOrientation;
+/// shouldAutorotate
+@property (nonatomic, assign) BOOL autoRotation;
 // viewController lifecycle block, return pushChildViewController.view
 @property (copy, nonatomic) void (^viewWillShowHandler)(UIView *childView);
 @property (copy, nonatomic) void (^viewDidShowHandler)(UIView *childView);
