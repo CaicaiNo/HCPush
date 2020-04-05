@@ -27,7 +27,7 @@
 ///custom transition class
 - (HCPush *(^)(Class anmaClass))amclass;
 ///Transition is animate,default is YES
-- (HCPush *(^)(BOOL isAnimate))dynamic;
+- (HCPush *(^)(BOOL isAnimate))animated;
 ///If backgroundView not set,the value will effect backgroundView`s color
 - (HCPush *(^)(UIColor *bgColor))bgColor;
 ///backgroundView

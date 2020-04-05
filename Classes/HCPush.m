@@ -71,7 +71,7 @@
     };
 }
 ///Transition is animate,default is YES
-- (HCPush *(^)(BOOL isAnimate))dynamic {
+- (HCPush *(^)(BOOL isAnimate))animated {
     return ^HCPush *(BOOL isAnimate) {
         self.pushVC.isTransitionAnimate = isAnimate;
         return self;
