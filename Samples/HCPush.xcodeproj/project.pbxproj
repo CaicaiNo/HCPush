@@ -10,6 +10,7 @@
 		044633462429074D001682B6 /* HCPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 044633452429074D001682B6 /* HCPush.m */; };
 		0446334924290F9A001682B6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0446334824290F9A001682B6 /* Info.plist */; };
 		044633702429110B001682B6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0446336F2429110B001682B6 /* Info.plist */; };
+		F31E6085242B282D007ECF37 /* HCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31E6083242B282D007ECF37 /* HCWebViewController.m */; };
 		F3560F75241F234400E0CE9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560F74241F234400E0CE9A /* AppDelegate.m */; };
 		F3560F78241F234400E0CE9A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560F77241F234400E0CE9A /* ViewController.m */; };
 		F3560F7B241F234400E0CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3560F79241F234400E0CE9A /* Main.storyboard */; };
@@ -44,6 +45,8 @@
 		044633452429074D001682B6 /* HCPush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPush.m; sourceTree = "<group>"; };
 		0446334824290F9A001682B6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0446336F2429110B001682B6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F31E6082242B282D007ECF37 /* HCWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCWebViewController.h; sourceTree = "<group>"; };
+		F31E6083242B282D007ECF37 /* HCWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCWebViewController.m; sourceTree = "<group>"; };
 		F3560F70241F234400E0CE9A /* HCPush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HCPush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3560F73241F234400E0CE9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F3560F74241F234400E0CE9A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -236,6 +239,8 @@
 			children = (
 				F3E96EDE24287B44006182B9 /* HCAlertView.h */,
 				F3E96EDF24287B44006182B9 /* HCAlertView.m */,
+				F31E6082242B282D007ECF37 /* HCWebViewController.h */,
+				F31E6083242B282D007ECF37 /* HCWebViewController.m */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -320,6 +325,7 @@
 				044633462429074D001682B6 /* HCPush.m in Sources */,
 				F3561026241F8C5100E0CE9A /* HCBaseViewController.m in Sources */,
 				F3560FE3241F5AA000E0CE9A /* HCCollectionReusableFooterView.m in Sources */,
+				F31E6085242B282D007ECF37 /* HCWebViewController.m in Sources */,
 				F3E96E2C24247F63006182B9 /* HCTagsContentView.m in Sources */,
 				F3560FD8241F49D400E0CE9A /* HCTestCollectionViewController.m in Sources */,
 				F3560F78241F234400E0CE9A /* ViewController.m in Sources */,

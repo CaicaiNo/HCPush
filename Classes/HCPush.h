@@ -40,6 +40,13 @@
 - (HCPush *(^)(UIViewController *child))childvc;
 ///if you only want to add a content view ,not a viewController,use this property
 - (HCPush *(^)(UIView *childv))childview;
+/// supportedInterfaceOrientations
+- (HCPush *(^)(UIInterfaceOrientationMask mask))vcMask;
+/// preferredInterfaceOrientationForPresentation
+- (HCPush *(^)(UIInterfaceOrientation orientation))preferOrien;
+/// shouldAutorotate
+- (HCPush *(^)(BOOL autoRotation))vcrotation;
+
 // viewController lifecycle block, return pushChildViewController.view
 - (HCPush *(^)(void (^)(UIView *view)))willshow;
 - (HCPush *(^)(void (^)(UIView *view)))didshow;
