@@ -12,7 +12,7 @@ https://github.com/CaicaiNo/HCPush.git
 ![](https://img-blog.csdnimg.cn/20200316210411133.gif)
 # CocoaPods
 ```c
-pod 'HCPushSettingViewController'
+pod 'HCPush'
 ```
 ## 问题处理
 1. `[!] Unable to find a specification for HCPushSettingViewController`
