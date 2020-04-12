@@ -17,7 +17,13 @@ pod 'HCPush'
 ## 问题处理
 1. `[!] Unable to find a specification for HCPushSettingViewController`
 
-调用pod repo update更新pod库
+调用
+
+```c
+pod repo update
+```
+
+更新pod库
 
 2. `[!] CDN: trunk Repo update failed`
 
