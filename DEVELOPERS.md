@@ -1,6 +1,19 @@
 
 
+* [代码规范](#coderules)
 * [Commit 规范](#commit)
+
+# <a name="coderules">代码规范
+
+我们遵循 `Google` 的 `Objective-C` 规范，请参考 https://google.github.io/styleguide/objcguide.html
+
+有几点不同的是：
+
+1. 自定义类的前缀我们使用 `Growing`
+2. 分类前缀使用 `Growing`
+3. `static` 常量以及 `Extern`常量以小写`k`开头，并添加`Growing`前缀，即`kGrowingXXXX`
+
+我们提供了一份我们修改并翻译后的中文版本说明  [中文Code规范](https://github.com/CaicaiNo/HCPush/blob/master/CODE_RULES.md)
 
 # <a name="commit">Commit 规范
 
@@ -316,7 +329,7 @@ o skip)
 
 然后就可以通过 git log -l 5 查看最近5条记录来确认是否格式。
 
-
+然后继续git push等操作将修改推至仓库即可。
 
 ## commitlint检测机制
 
