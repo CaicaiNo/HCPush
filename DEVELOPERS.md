@@ -1,6 +1,8 @@
-[toc]
 
-# Commit 规范
+
+* [Commit 规范](#commit)
+
+# <a name="commit">Commit 规范
 
 ## angular规范
 
