@@ -1,6 +1,7 @@
 <p align="center" >
   <a href='https://www.growingio.com'><img src="https://www.growingio.com/assets/images/home_v3/gio-logo-primary.png" alt="GrowingIO" title="GrowingIO"></a>
 </p>
+
 [GrowingIO](https://www.growingio.com/about) （北京易数科技有限公司）是基于用户行为数据的增长平台，国内领先的数据运营解决方案供应商。为产品、运营、市场、数据团队及管理者等，提供客户数据平台、获客分析、产品分析、智能运营等产品和咨询服务，帮助企业在数据化升级的路上，提升数据驱动能力，实现更好的增长。
 
 ---
@@ -8,11 +9,13 @@
 # GrowingCoreKit
 
 [![LICENSE](https://img.shields.io/github/license/pingcap/tidb.svg)](https://github.com/pingcap/tidb/blob/master/LICENSE)
-//地址需要替换成项目中的
 [![GitHub release](https://img.shields.io/github/tag/growingio/GrowingSDK-iOS-GrowingCoreKit.svg?label=release)](https://github.com/growingio/GrowingSDK-iOS-GrowingCoreKit/releases)
 ![Cocoapods platforms](https://img.shields.io/cocoapods/p/GrowingCoreKit.svg?color=gree)
 [![GitHub release date](https://img.shields.io/github/release-date/growingio/GrowingSDK-iOS-GrowingCoreKit.svg)](https://github.com/growingio/GrowingSDK-iOS-GrowingCoreKit/releases)
 ![Language](https://img.shields.io/badge/language-Objective--C-brightgreen.svg)
+
+//徽章图标地址需要替换成项目中的
+
 [GrowingCoreKit](https://github.com/growingio/GrowingSDK-iOS-GrowingCoreKit) 为埋点以及无埋点实现的核心部分，包括Hook、文件管理、日志、网络等核心模块。
 
 如果你不需要在此基础上进行封装，请使用业务层的 [GrowingAutoTrackKit](https://github.com/growingio/GrowingSDK-iOS-GrowingAutoTrackKit)
@@ -47,4 +50,3 @@
 ## License
 
 GrowingCoreKit 是在 Apache 2.0 许可下发布的。详见 [LICENSE](https://github.com/AFNetworking/AFNetworking/blob/master/LICENSE) 。
-
