@@ -32,6 +32,14 @@
 
 请参考GrowingIO官网的帮助文档 [原生iOS SDK集成](https://docs.growingio.com/v3/developer-manual/sdkintegrated/ios-sdk/)
 
+# 感谢
+
+- YYKit
+
+- ....
+
+  
+
 ## 社区交流
 
 - 如果你发现一个bug，而且能够提供其重现步骤，请提一个issue
