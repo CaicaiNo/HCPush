@@ -31,7 +31,6 @@
 - (void)setTagsView {
     self.backgroundColor = [UIColor colorWithRed:26/255.f green:26/255.f blue:26/255.f alpha:0.5];
     _tagsView = [[HCTagsContentView alloc] init];
-//    _tagsView = [[HCTagsContentView alloc] initWithFrame:CGRectMake(0, 0, 200, 200) tags:@[@"不爱的不断打扰",@"你爱的不在怀抱",@"得到手的不需要",@"渴望拥有的得不到",@"苦恼",@"倒不如说声笑笑",@"生活不要 太多钞票",@"多了就会带来困扰",@"过重的背包"] handler:nil];
     _tagsView.tagTextsSet(@[@"不爱的不断打扰",@"你爱的不在怀抱",@"得到手的不需要",@"渴望拥有的得不到",@"苦恼",@"倒不如说声笑笑",@"生活不要 太多钞票",@"多了就会带来困扰",@"过重的背包"]).allowSelectSet(YES).handler = ^(NSInteger index, NSString *text, BOOL isSelect) {
         NSLog(@"select %ld,text %@",(long)index,text);
     };
