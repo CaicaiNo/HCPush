@@ -12,7 +12,6 @@ before_install:
 before_script:
 - "./travis/scripts/add-key.sh"
 
-
 script:
 - set -o pipefail && xcodebuild -project Samples/HCPush.xcodeproj -scheme HCPush -sdk
   iphoneos -configuration Release | xcpretty
