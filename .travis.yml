@@ -4,7 +4,6 @@ language: objective-c
 
 before_install:
 - chmod +x scripts/travis/add-key.sh
-- cd $TRAVIS_BUILD_DIR
 - openssl aes-256-cbc -K $encrypted_325e42e71f12_key -iv $encrypted_325e42e71f12_iv
   -in certificates.tar.enc -out certificates.tar -d
 - tar xvf certificates.tar -C ./scripts/travis/certificates
