@@ -1,0 +1,35 @@
+# Xcode
+.DS_Store
+build/
+*.xccheckout
+*.xcuserstate
+/*.xcuserstate
+
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
+
+
+Example/Pods/
+
+Growing/release
+
+release/
+
+# ignore XCExtent report
+*/XCExtentReport.html
+
+node_modules/
+
+package-lock.json
+package.json
