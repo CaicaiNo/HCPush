@@ -1,8 +1,6 @@
 os: osx
-osx_image: xcode9
+osx_image: xcode11.6
 language: objective-c
 
-xcode_project: Samples/HCPush.xcodeproj # path to your xcodeproj folder
-xcode_scheme: HCPush
-xcode_destination: platform=iOS Simulator,OS=13.5,name=iPhone X
-
+script:
+  - set -o pipefail && xcodebuild -project Samples/HCPush.xcodeproj -scheme HCPush -sdk iphoneos -configuration Release | xcpretty
