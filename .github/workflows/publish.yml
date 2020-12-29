@@ -1,0 +1,22 @@
+name: Publish Cocoapods
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Cocoapods
+        run: gem install cocoapods
+        
+      - name: Deploy to Cocoapods
+        run: |
+          set -eo pipefail
+          pod lib lint --allow-warnings --use-libraries
+          pod trunk push --allow-warnings --use-libraries
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
