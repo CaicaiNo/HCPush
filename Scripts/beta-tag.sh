@@ -1,6 +1,8 @@
 #!/bin/bash
 set -x
 
+pod repo update
+
 POD_BETA_VERSOIN=`cat HCPush.podspec | grep 's.version\s*=' | grep -Eo '[0-9]+.[0-9]+.[0-9]+'-beta`
 BETA='beta'
 
