@@ -33,7 +33,7 @@ else
 fi
 
 echo "删除trunk上的cocoapods库"
-pod trunk delete HCPush $POD_BETA_VERSOIN
+echo y | pod trunk delete HCPush $POD_BETA_VERSOIN 
 
 git tag $POD_BETA_VERSOIN
 git push --tags
