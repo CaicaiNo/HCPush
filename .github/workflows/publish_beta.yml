@@ -29,8 +29,6 @@ jobs:
           set -eo pipefail
           pod repo update
           sh Scripts/beta-tag.sh
-          pod lib lint --allow-warnings --use-libraries
-          pod trunk push --allow-warnings --use-libraries
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
