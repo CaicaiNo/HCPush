@@ -12,7 +12,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: macos-latest
-
+    # main 分支的发布请走正式流程，手动仅能发布其他分支的beta版本，用于测试
+    if: ${{ github.ref != 'refs/heads/main' }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Install Cocoapods
